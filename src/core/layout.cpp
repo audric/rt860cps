@@ -1,7 +1,12 @@
 #include "layout.h"
 #include <QRegularExpression>
+#ifdef Q_OS_WIN
+#include <cstring>
+#include <windows.h>
+#else
 #include <cerrno>
 #include <iconv.h>
+#endif
 
 namespace rt860 {
 
@@ -26,6 +31,30 @@ void putLe(QByteArray &b, int at, int n, quint32 v) {
     for (int i = 0; i < n; ++i) b[at + i] = char((v >> (8 * i)) & 0xff);
 }
 
+#ifdef Q_OS_WIN
+// Converts between "GBK" and "UTF-8" with Windows code page 936; returns false if
+// the text cannot be converted.
+bool convert(const char *to, const char *, const QByteArray &in, QByteArray &out) {
+    constexpr UINT Gbk = 936;
+    out.clear();
+    if (in.isEmpty()) return true;
+    if (std::strcmp(to, "GBK") == 0) {
+        const QString text = QString::fromUtf8(in);
+        const wchar_t *wide = reinterpret_cast<const wchar_t *>(text.utf16());
+        BOOL lost = FALSE;
+        const int n = ::WideCharToMultiByte(Gbk, WC_NO_BEST_FIT_CHARS, wide, int(text.size()), nullptr, 0, nullptr, &lost);
+        if (n <= 0 || lost) return false;
+        out.resize(n);
+        return ::WideCharToMultiByte(Gbk, WC_NO_BEST_FIT_CHARS, wide, int(text.size()), out.data(), n, nullptr, &lost) == n && !lost;
+    }
+    const int n = ::MultiByteToWideChar(Gbk, MB_ERR_INVALID_CHARS, in.constData(), int(in.size()), nullptr, 0);
+    if (n <= 0) return false;
+    QString text(n, QChar(0));
+    if (::MultiByteToWideChar(Gbk, MB_ERR_INVALID_CHARS, in.constData(), int(in.size()), reinterpret_cast<wchar_t *>(text.data()), n) != n) return false;
+    out = text.toUtf8();
+    return true;
+}
+#else
 // Converts with iconv; returns false if the text cannot be converted.
 bool convert(const char *to, const char *from, const QByteArray &in, QByteArray &out) {
     iconv_t cd = iconv_open(to, from);
@@ -41,6 +70,7 @@ bool convert(const char *to, const char *from, const QByteArray &in, QByteArray 
     out = buf.left(buf.size() - int(dstLeft));
     return true;
 }
+#endif
 
 // GBK bytes of each character of `text`; empty list entry never occurs.
 // Returns false if a character has no GBK form.
