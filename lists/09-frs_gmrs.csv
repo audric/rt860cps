@@ -1,0 +1,25 @@
+# name: FRS/GMRS
+# note: USA 462/467 MHz, 22 channels
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+FRS 01,462.56250,,,,FM,Wide,Low
+FRS 02,462.58750,,,,FM,Wide,Low
+FRS 03,462.61250,,,,FM,Wide,Low
+FRS 04,462.63750,,,,FM,Wide,Low
+FRS 05,462.66250,,,,FM,Wide,Low
+FRS 06,462.68750,,,,FM,Wide,Low
+FRS 07,462.71250,,,,FM,Wide,Low
+FRS 08,467.56250,,,,FM,Narrow,Low
+FRS 09,467.58750,,,,FM,Narrow,Low
+FRS 10,467.61250,,,,FM,Narrow,Low
+FRS 11,467.63750,,,,FM,Narrow,Low
+FRS 12,467.66250,,,,FM,Narrow,Low
+FRS 13,467.68750,,,,FM,Narrow,Low
+FRS 14,467.71250,,,,FM,Narrow,Low
+FRS 15,462.55000,,,,FM,Wide,High
+FRS 16,462.57500,,,,FM,Wide,High
+FRS 17,462.60000,,,,FM,Wide,High
+FRS 18,462.62500,,,,FM,Wide,High
+FRS 19,462.65000,,,,FM,Wide,High
+FRS 20,462.67500,,,,FM,Wide,High
+FRS 21,462.70000,,,,FM,Wide,High
+FRS 22,462.72500,,,,FM,Wide,High

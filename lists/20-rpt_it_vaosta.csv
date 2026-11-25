@@ -1,0 +1,6 @@
+# name: RPT V.Aosta
+# note: Amateur FM repeaters in V.Aosta (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+R0 Courmayeur,145.60000,145.00000,74.4,,FM,Wide,High
+R6 Saint Vincent,145.75000,145.15000,74.4,,FM,Wide,High
+RU12 Sarre,430.30000,435.30000,74.4,,FM,Wide,High

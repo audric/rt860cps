@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=RT-860 CPS
+Comment=Edit channels, zones and settings of a Radtel RT-860
+Exec=rt860cps %f
+Terminal=false
+Categories=Utility;HamRadio;

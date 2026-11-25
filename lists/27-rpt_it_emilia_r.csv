@@ -1,0 +1,47 @@
+# name: RPT Emilia R.
+# note: Amateur FM repeaters in Emilia R. (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+R0 Lama di Mocog,145.60000,145.00000,77.0,,FM,Wide,High
+R0 Rimini,145.60000,145.00000,77.0,,FM,Wide,High
+R0a Modigliana,145.61250,145.01250,141.3,,FM,Narrow,High
+R1a Pianoro,145.63750,145.03750,77.0,,FM,Narrow,High
+R2 Bertinoro,145.65000,145.05000,,,FM,Wide,High
+R2a M.Coroncina,145.66250,145.06250,77.0,,FM,Narrow,High
+R3 Parma,145.67500,145.07500,,,FM,Wide,High
+R3a Castel Maggi,145.68750,145.08750,77.0,,FM,Narrow,High
+R3a Piacenza,145.68750,145.08750,77.0,,FM,Narrow,High
+R4a M.Ghebbio,145.71250,145.11250,141.3,,FM,Narrow,High
+R4a Casina,145.71250,145.11250,88.5,,FM,Narrow,High
+R5a M.Fumaiolo,145.73750,145.13750,,,FM,Narrow,High
+R5a Fidenza,145.73750,145.13750,88.5,,FM,Narrow,High
+R6a M.Cimone,145.76250,145.16250,77.0,,FM,Narrow,High
+R7 Ferrara,145.77500,145.17500,77.0,,FM,Wide,High
+RU0a Casina,430.01250,431.61250,88.5,,FM,Narrow,High
+RU1 M.Ghebbio,430.02500,431.62500,141.3,,FM,Wide,High
+RU1a Barbiano,430.03750,431.63750,77.0,,FM,Narrow,High
+RU2a Montagnana,430.06250,431.66250,77.0,,FM,Narrow,High
+RU3 M.Trebbio,430.07500,431.67500,77.0,,FM,Wide,High
+RU4a Meldola,430.11250,431.71250,77.0,,FM,Narrow,High
+RU5 M.Cassio,430.12500,431.72500,77.0,,FM,Wide,High
+RU5 Bagnacavallo,430.12500,431.72500,,,FM,Wide,High
+RU6 M.Coroncina,430.15000,431.75000,77.0,,FM,Wide,High
+RU7 M.Calvo,430.17500,431.77500,77.0,,FM,Wide,High
+RU9 Gropparello,430.22500,431.82500,77.0,,FM,Wide,High
+RU10a Monterenzi,430.26250,431.86250,77.0,,FM,Narrow,High
+RU13 M.Pelpi,430.32500,431.92500,141.3,,FM,Wide,High
+RU14 Bondeno,430.35000,431.95000,77.0,,FM,Wide,High
+RU15 Casalgrande,430.37500,431.97500,77.0,,FM,Wide,High
+RU Val Tidone,430.53750,435.53750,77.0,,FM,Narrow,High
+RU Bologna,430.65000,435.65000,77.0,,FM,Wide,High
+RU M.Canate,430.72500,435.40000,77.0,,FM,Wide,High
+RU16 Monfestino-,431.22500,432.82500,77.0,,FM,Wide,High
+RU17a Oriolo dei,431.26250,432.86250,77.0,,FM,Narrow,High
+RU18 Cesenatico,431.27500,432.87500,141.3,,FM,Wide,High
+RU18 Colli Piace,431.27500,432.87500,77.0,,FM,Wide,High
+RU19a Montovolo,431.31250,432.91250,77.0,,FM,Narrow,High
+RU20 Salsomaggio,431.32500,432.92500,77.0,,FM,Wide,High
+RU20 Salsomagg 2,431.32500,432.92500,77.0,,FM,Wide,High
+RU21 M.Molinatic,431.35000,432.95000,77.0,,FM,Wide,High
+RU21a M.Cantiere,431.36250,432.96250,77.0,,FM,Narrow,High
+RU24a Modigliana,431.43750,433.03750,141.3,,FM,Narrow,High
+RU30a Torriana,431.58750,433.18750,77.0,,FM,Narrow,High

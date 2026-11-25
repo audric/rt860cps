@@ -1,0 +1,27 @@
+# name: CB 43 MHz
+# note: Italian 43 MHz band, 24 channels
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+43MHz 01,43.30000,,,,FM,Narrow,Low
+43MHz 02,43.31250,,,,FM,Narrow,Low
+43MHz 03,43.32500,,,,FM,Narrow,Low
+43MHz 04,43.33750,,,,FM,Narrow,Low
+43MHz 05,43.35000,,,,FM,Narrow,Low
+43MHz 06,43.36250,,,,FM,Narrow,Low
+43MHz 07,43.37500,,,,FM,Narrow,Low
+43MHz 08,43.38750,,,,FM,Narrow,Low
+43MHz 09,43.40000,,,,FM,Narrow,Low
+43MHz 10,43.41250,,,,FM,Narrow,Low
+43MHz 11,43.42500,,,,FM,Narrow,Low
+43MHz 12,43.43750,,,,FM,Narrow,Low
+43MHz 13,43.45000,,,,FM,Narrow,Low
+43MHz 14,43.46250,,,,FM,Narrow,Low
+43MHz 15,43.47500,,,,FM,Narrow,Low
+43MHz 16,43.48750,,,,FM,Narrow,Low
+43MHz 17,43.50000,,,,FM,Narrow,Low
+43MHz 18,43.51250,,,,FM,Narrow,Low
+43MHz 19,43.52500,,,,FM,Narrow,Low
+43MHz 20,43.53750,,,,FM,Narrow,Low
+43MHz 21,43.55000,,,,FM,Narrow,Low
+43MHz 22,43.56250,,,,FM,Narrow,Low
+43MHz 23,43.57500,,,,FM,Narrow,Low
+43MHz 24,43.58750,,,,FM,Narrow,Low

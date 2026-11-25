@@ -1,0 +1,19 @@
+# name: Satellites
+# note: Amateur FM satellites and the ISS, with Doppler steps (AOS = start of pass, LOS = end). Amateur licence needed to transmit
+# Frequencies and tones change and satellites come and go: check current status (e.g. amsat.org) before a pass.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+ISS voice down,145.80000,,,,FM,Wide,Low
+ISS APRS,145.82500,,,,FM,Wide,High
+ISS rpt AOS,437.81000,145.99000,67.0,,FM,Wide,High
+ISS rpt mid,437.80000,145.99000,67.0,,FM,Wide,High
+ISS rpt LOS,437.79000,145.99000,67.0,,FM,Wide,High
+SO-50 arm 74.4,436.80500,145.85000,74.4,,FM,Wide,High
+SO-50 AOS,436.80500,145.85000,67.0,,FM,Wide,High
+SO-50 mid,436.79500,145.85000,67.0,,FM,Wide,High
+SO-50 LOS,436.78500,145.85000,67.0,,FM,Wide,High
+PO-101 AOS,145.90000,437.49000,141.3,,FM,Wide,High
+PO-101 mid,145.90000,437.50000,141.3,,FM,Wide,High
+PO-101 LOS,145.90000,437.51000,141.3,,FM,Wide,High
+AO-91 AOS,145.96000,435.24000,67.0,,FM,Wide,High
+AO-91 mid,145.96000,435.25000,67.0,,FM,Wide,High
+AO-91 LOS,145.96000,435.26000,67.0,,FM,Wide,High

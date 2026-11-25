@@ -1,0 +1,43 @@
+# name: CB AM
+# note: Citizens band 27 MHz, 40 channels, AM
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+CB 01 AM,26.96500,,,,AM,Narrow,Low
+CB 02 AM,26.97500,,,,AM,Narrow,Low
+CB 03 AM,26.98500,,,,AM,Narrow,Low
+CB 04 AM,27.00500,,,,AM,Narrow,Low
+CB 05 AM,27.01500,,,,AM,Narrow,Low
+CB 06 AM,27.02500,,,,AM,Narrow,Low
+CB 07 AM,27.03500,,,,AM,Narrow,Low
+CB 08 AM,27.05500,,,,AM,Narrow,Low
+CB 09 AM,27.06500,,,,AM,Narrow,Low
+CB 10 AM,27.07500,,,,AM,Narrow,Low
+CB 11 AM,27.08500,,,,AM,Narrow,Low
+CB 12 AM,27.10500,,,,AM,Narrow,Low
+CB 13 AM,27.11500,,,,AM,Narrow,Low
+CB 14 AM,27.12500,,,,AM,Narrow,Low
+CB 15 AM,27.13500,,,,AM,Narrow,Low
+CB 16 AM,27.15500,,,,AM,Narrow,Low
+CB 17 AM,27.16500,,,,AM,Narrow,Low
+CB 18 AM,27.17500,,,,AM,Narrow,Low
+CB 19 AM,27.18500,,,,AM,Narrow,Low
+CB 20 AM,27.20500,,,,AM,Narrow,Low
+CB 21 AM,27.21500,,,,AM,Narrow,Low
+CB 22 AM,27.22500,,,,AM,Narrow,Low
+CB 23 AM,27.25500,,,,AM,Narrow,Low
+CB 24 AM,27.23500,,,,AM,Narrow,Low
+CB 25 AM,27.24500,,,,AM,Narrow,Low
+CB 26 AM,27.26500,,,,AM,Narrow,Low
+CB 27 AM,27.27500,,,,AM,Narrow,Low
+CB 28 AM,27.28500,,,,AM,Narrow,Low
+CB 29 AM,27.29500,,,,AM,Narrow,Low
+CB 30 AM,27.30500,,,,AM,Narrow,Low
+CB 31 AM,27.31500,,,,AM,Narrow,Low
+CB 32 AM,27.32500,,,,AM,Narrow,Low
+CB 33 AM,27.33500,,,,AM,Narrow,Low
+CB 34 AM,27.34500,,,,AM,Narrow,Low
+CB 35 AM,27.35500,,,,AM,Narrow,Low
+CB 36 AM,27.36500,,,,AM,Narrow,Low
+CB 37 AM,27.37500,,,,AM,Narrow,Low
+CB 38 AM,27.38500,,,,AM,Narrow,Low
+CB 39 AM,27.39500,,,,AM,Narrow,Low
+CB 40 AM,27.40500,,,,AM,Narrow,Low

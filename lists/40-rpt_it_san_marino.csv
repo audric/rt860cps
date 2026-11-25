@@ -1,0 +1,4 @@
+# name: RPT San Marino
+# note: Amateur FM repeaters in San Marino (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RU10a San Marino,430.26250,431.86250,91.5,,FM,Narrow,High

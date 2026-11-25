@@ -1,0 +1,93 @@
+# name: RPT Sicilia
+# note: Amateur FM repeaters in Sicilia (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV Valverde,145.37500,144.77500,94.8,,FM,Wide,High
+RV M.Grande,145.45000,144.85000,,,FM,Wide,High
+RV Giarre,145.47500,144.87500,127.3,,FM,Wide,High
+RV Cesaro',145.50000,144.90000,94.8,,FM,Wide,High
+RV-1 Messina,145.57500,144.97500,94.8,,FM,Wide,High
+RV-1 Siracusa,145.57500,144.97500,77.0,,FM,Wide,High
+RV-1 Castellamar,145.57500,144.97500,127.3,,FM,Wide,High
+RV-1a Castronovo,145.58750,144.98750,94.8,,FM,Narrow,High
+R0 Ribera,145.60000,145.00000,127.3,,FM,Wide,High
+R0 Ragusa,145.60000,145.00000,94.8,,FM,Wide,High
+R0a Ribera,145.61250,145.01250,127.3,,FM,Narrow,High
+R0a M.S.Angelo,145.61250,145.01250,94.8,,FM,Narrow,High
+R0a Montagna Gra,145.61250,145.01250,,,FM,Narrow,High
+R1a Tipoldo,145.63750,145.03750,127.3,,FM,Narrow,High
+R1a M.Lauro,145.63750,145.03750,77.0,,FM,Narrow,High
+R1a Montagna,145.63750,145.03750,127.3,,FM,Narrow,High
+R2 Caltanisetta,145.65000,145.05000,127.3,,FM,Wide,High
+R2 M.S.Angelo,145.65000,145.05000,94.8,,FM,Wide,High
+R2 M.Kalfa in Ro,145.65000,145.05000,94.8,,FM,Wide,High
+R2 Ispica,145.65000,145.05000,94.8,,FM,Wide,High
+R2 Partanna,145.65000,145.05000,94.8,,FM,Wide,High
+R2a M.delle Rose,145.66250,145.06250,94.8,,FM,Narrow,High
+R3 Santa Margher,145.67500,145.07500,94.8,,FM,Wide,High
+R3 Plemmirio,145.67500,145.07500,,,FM,Wide,High
+R3a Ribera,145.68750,145.08750,127.3,,FM,Narrow,High
+R3a M.Pecoraro,145.68750,145.08750,94.8,,FM,Narrow,High
+R4a Mussomeli,145.71250,145.11250,94.8,,FM,Narrow,High
+R5 M.Etna,145.72500,145.12500,94.8,,FM,Wide,High
+R5 Partanna,145.72500,145.12500,127.3,,FM,Wide,High
+R5a M.Etna,145.73750,145.13750,127.3,,FM,Narrow,High
+R5a M.San Salvat,145.73750,145.13750,,,FM,Narrow,High
+R5a M.Aquilone,145.73750,145.13750,77.0,,FM,Narrow,High
+R6 Pizzo Telegra,145.75000,145.15000,94.8,,FM,Wide,High
+R6 M.Cardillo,145.75000,145.15000,94.8,,FM,Wide,High
+R6 Pizzo Chiarin,145.75000,145.15000,94.8,,FM,Wide,High
+R6a M.Gibilmesi,145.76250,145.16250,127.3,,FM,Narrow,High
+R6a Ispica,145.76250,145.16250,94.8,,FM,Narrow,High
+R6a Costa Sarace,145.76250,145.16250,,,FM,Narrow,High
+R7 M.Erice,145.77500,145.17500,94.8,,FM,Wide,High
+R7a M.Grifone,145.78750,145.18750,94.8,,FM,Narrow,High
+R7a M.Arcibessi,145.78750,145.18750,110.9,,FM,Narrow,High
+R7a Campobello d,145.78750,145.18750,127.3,,FM,Narrow,High
+RU1 Caltagirone,430.02500,431.62500,127.3,,FM,Wide,High
+RU1 Marina di Ra,430.02500,435.02500,94.8,,FM,Wide,High
+RU2 San Cataldo,430.05000,431.65000,88.5,,FM,Wide,High
+RU2 Catania Grat,430.05000,431.65000,94.8,,FM,Wide,High
+RU2 Marsala,430.05000,431.65000,94.8,,FM,Wide,High
+RU3 Santa Marghe,430.07500,431.67500,94.8,,FM,Wide,High
+RU3 Belvedere di,430.07500,431.67500,,,FM,Wide,High
+RU3a Ribera,430.08750,431.68750,127.3,,FM,Narrow,High
+RU4 Pizzo Chiari,430.10000,431.70000,94.8,,FM,Wide,High
+RU4 Pizzo Castel,430.10000,435.10000,94.8,,FM,Wide,High
+RU5 Avola,430.12500,431.72500,77.0,,FM,Wide,High
+RU5a Messina,430.13750,431.73750,94.8,,FM,Narrow,High
+RU6 Montagna Lon,430.15000,435.15000,118.8,,FM,Wide,High
+RU7 Castelmola,430.17500,431.77500,127.3,,FM,Wide,High
+RU7 Modica,430.17500,431.77500,94.8,,FM,Wide,High
+RU9 Ragusa,430.22500,431.82500,94.8,,FM,Wide,High
+RU9 Marsala,430.22500,435.22500,94.8,,FM,Wide,High
+RU10 Centuripe,430.25000,431.85000,94.8,,FM,Wide,High
+RU11 Ispica,430.27500,435.27500,94.8,,FM,Wide,High
+RU12 Montagna Gr,430.30000,431.90000,88.5,,FM,Wide,High
+RU13 Bronte,430.32500,431.92500,127.3,,FM,Wide,High
+RU13 Gioiosa Mar,430.32500,431.92500,127.3,,FM,Wide,High
+RU13a M.Suzza,430.33750,431.93750,94.8,,FM,Narrow,High
+RU15 Montagna Gr,430.37500,435.37500,94.8,,FM,Wide,High
+RU Rupe Atenea,430.50000,435.50000,94.8,,FM,Wide,High
+RU Belpasso,430.57500,435.57500,94.8,,FM,Wide,High
+RU Pizzo Trigna,430.61250,435.61250,94.8,,FM,Narrow,High
+RU M.Ficuzza,430.65000,435.65000,94.8,,FM,Wide,High
+RU Valledolmo,430.73750,435.73750,94.8,,FM,Narrow,High
+RU M.Teja,430.77500,435.77500,94.8,,FM,Wide,High
+RU Messina,430.82500,435.82500,94.8,,FM,Wide,High
+RU Pantelleria,430.87500,435.87500,94.8,,FM,Wide,High
+RU Castronovo di,430.90000,435.90000,94.8,,FM,Wide,High
+RU Castelverde,430.96250,432.56250,94.8,,FM,Narrow,High
+RU16 Zafferana E,431.22500,432.82500,88.5,,FM,Wide,High
+RU16 Enna,431.22500,432.82500,77.0,,FM,Wide,High
+RU17 Corvacchio,431.25000,432.85000,88.5,,FM,Wide,High
+RU18 M.Arcibessi,431.27500,432.87500,88.5,,FM,Wide,High
+RU20 Messina,431.32500,432.92500,94.8,,FM,Wide,High
+RU20 Partanna,431.32500,432.92500,88.5,,FM,Wide,High
+RU21 M.S.Angelo,431.35000,432.95000,94.8,,FM,Wide,High
+RU21 M.Lauro,431.35000,432.95000,88.5,,FM,Wide,High
+RU21a M.San Mich,431.36250,432.96250,94.8,,FM,Narrow,High
+RU22 M.Ciccia,431.37500,432.97500,91.5,,FM,Wide,High
+RU25 M.Cardillo,431.45000,433.05000,127.3,,FM,Wide,High
+RU25 Messina,431.45000,433.05000,94.8,,FM,Wide,High
+RU27 M.delle Ros,431.50000,433.10000,,,FM,Wide,High
+RU30a Marsala,431.58750,433.18750,94.8,,FM,Narrow,High

@@ -1,0 +1,19 @@
+# name: PMR446
+# note: Licence-free 446 MHz in Europe, 16 analogue channels
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+PMR 01,446.00625,,,,FM,Narrow,Low
+PMR 02,446.01875,,,,FM,Narrow,Low
+PMR 03,446.03125,,,,FM,Narrow,Low
+PMR 04,446.04375,,,,FM,Narrow,Low
+PMR 05,446.05625,,,,FM,Narrow,Low
+PMR 06,446.06875,,,,FM,Narrow,Low
+PMR 07,446.08125,,,,FM,Narrow,Low
+PMR 08,446.09375,,,,FM,Narrow,Low
+PMR 09,446.10625,,,,FM,Narrow,Low
+PMR 10,446.11875,,,,FM,Narrow,Low
+PMR 11,446.13125,,,,FM,Narrow,Low
+PMR 12,446.14375,,,,FM,Narrow,Low
+PMR 13,446.15625,,,,FM,Narrow,Low
+PMR 14,446.16875,,,,FM,Narrow,Low
+PMR 15,446.18125,,,,FM,Narrow,Low
+PMR 16,446.19375,,,,FM,Narrow,Low

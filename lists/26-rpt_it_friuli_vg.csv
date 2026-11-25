@@ -1,0 +1,26 @@
+# name: RPT Friuli V.G.
+# note: Amateur FM repeaters in Friuli V.G. (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+R0 Chiampore,145.60000,145.00000,,,FM,Wide,High
+R0a Latisana,145.61250,145.01250,118.8,,FM,Narrow,High
+R1a M.Joanaz,145.63750,145.03750,,,FM,Narrow,High
+R2 Tricesimo,145.65000,145.05000,118.8,,FM,Wide,High
+R2a Gorizia,145.66250,145.06250,118.8,,FM,Narrow,High
+R2a M.Lussari,145.66250,145.06250,,,FM,Narrow,High
+R3a M.Verzegnis,145.68750,145.08750,110.9,,FM,Narrow,High
+R4 Tricesimo,145.70000,145.10000,118.8,,FM,Wide,High
+R5 M.San Simeone,145.72500,145.12500,,,FM,Wide,High
+R6 Piancavallo,145.75000,145.15000,,,FM,Wide,High
+R7 Forcella di G,145.77500,145.17500,118.8,,FM,Wide,High
+R7a M.Zoncolan,145.78750,145.18750,118.8,,FM,Narrow,High
+RU1a Cattinara,430.03750,431.63750,,,FM,Narrow,High
+RU2 M.Quas,430.05000,431.65000,,,FM,Wide,High
+RU7 Reana,430.17500,431.77500,,,FM,Wide,High
+RU8 Cazzaso,430.20000,431.80000,,,FM,Wide,High
+RU10 M.Jouf,430.25000,431.85000,118.8,,FM,Wide,High
+RU12 Forcella di,430.30000,431.90000,118.8,,FM,Wide,High
+RU15 M.Pala,430.37500,431.97500,88.5,,FM,Wide,High
+RU M.Sabotino,431.11500,432.71500,118.8,,FM,Narrow,High
+RU21a Grado,431.36250,432.96250,118.8,,FM,Narrow,High
+RU22a M.Grisa,431.38750,432.98750,118.8,,FM,Narrow,High
+RU31 Tricesimo,431.60000,433.20000,118.8,,FM,Wide,High

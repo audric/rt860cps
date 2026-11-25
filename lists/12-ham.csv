@@ -1,0 +1,13 @@
+# name: Amateur calling
+# note: Amateur radio calling and common frequencies (IARU Region 1)
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+10m FM call,29.60000,,,,FM,Narrow,High
+6m SSB call,50.15000,,,,SSB,Narrow,High
+6m FM call,51.51000,,,,FM,Narrow,High
+2m SSB call,144.30000,,,,SSB,Narrow,High
+2m APRS,144.80000,,,,FM,Narrow,High
+2m FM call,145.50000,,,,FM,Narrow,High
+ISS voice down,145.80000,,,,FM,Wide,Low
+ISS APRS,145.82500,,,,FM,Wide,High
+70cm SSB call,432.20000,,,,SSB,Narrow,High
+70cm FM call,433.50000,,,,FM,Narrow,High

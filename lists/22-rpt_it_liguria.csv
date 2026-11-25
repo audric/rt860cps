@@ -1,0 +1,53 @@
+# name: RPT Liguria
+# note: Amateur FM repeaters in Liguria (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV-1 Val Tanaro,145.57500,144.97500,110.9,,FM,Wide,High
+RV-1a Poggio Cro,145.58750,144.98750,162.2,,FM,Narrow,High
+R0 M.Faudo,145.60000,145.00000,110.9,,FM,Wide,High
+R0a Sestri Levan,145.61250,145.01250,110.9,,FM,Narrow,High
+R1 Poggio Sanrem,145.62500,145.02500,162.2,,FM,Wide,High
+R1a M.Balano,145.63750,145.03750,,,FM,Narrow,High
+R1a Cosseria,145.63750,145.03750,110.9,,FM,Narrow,High
+R2 M.Bignone,145.65000,145.05000,110.9,,FM,Wide,High
+R2 San Giovanni,145.65000,145.05000,74.4,,FM,Wide,High
+R2a Bardineto,145.66250,145.06250,110.9,,FM,Narrow,High
+R3 M.Beigua,145.67500,145.07500,162.2,,FM,Wide,High
+R3a M.Bardellini,145.68750,145.08750,110.9,,FM,Narrow,High
+R4 M.Figogna,145.70000,145.10000,110.9,,FM,Wide,High
+R4 Sanremo,145.70000,145.10000,162.2,,FM,Wide,High
+R4a M.Verrugoli,145.71250,145.11250,110.9,,FM,Narrow,High
+R5 M.Fasce,145.72500,145.12500,110.9,,FM,Wide,High
+R5a Pizzo d'Evig,145.73750,145.13750,162.2,,FM,Narrow,High
+R6 Rapallo,145.75000,145.15000,110.9,,FM,Wide,High
+R6a M.Tirasso,145.76250,145.16250,110.9,,FM,Narrow,High
+R7 M.Faudo,145.77500,145.17500,110.9,,FM,Wide,High
+R7 S.Elena,145.77500,145.17500,162.2,,FM,Wide,High
+R7a Perinaldo,145.78750,145.18750,110.9,,FM,Narrow,High
+R7a Finale Ligur,145.78750,145.18750,110.9,,FM,Narrow,High
+RU1 Cosseria,430.02500,431.62500,,,FM,Wide,High
+RU1a M.Beigua,430.03750,435.03750,110.9,,FM,Narrow,High
+RU2 M.Bignone,430.05000,431.65000,110.9,,FM,Wide,High
+RU2a M.Grande,430.06250,431.66250,162.2,,FM,Narrow,High
+RU3 Bric Colombi,430.07500,431.67500,110.9,,FM,Wide,High
+RU3a M.San Nicol,430.08750,431.68750,110.9,,FM,Narrow,High
+RU4 Rapallo,430.10000,431.70000,110.9,,FM,Wide,High
+RU5 M.Fasce,430.12500,431.72500,110.9,,FM,Wide,High
+RU5a Murialdo,430.13750,431.73750,110.9,,FM,Narrow,High
+RU6 M.Figogna,430.15000,431.75000,110.9,,FM,Wide,High
+RU6a Moneglia-Br,430.16250,431.76250,110.9,,FM,Narrow,High
+RU7 M.te La Cast,430.17500,431.77500,110.9,,FM,Wide,High
+RU7a Finale Ligu,430.18750,431.78750,162.2,,FM,Narrow,High
+RU9 Montenero,430.22500,431.82500,110.9,,FM,Wide,High
+RU11 Sant'Olcese,430.27500,431.87500,110.9,,FM,Wide,High
+RU12 M.Parodi,430.30000,431.90000,162.2,,FM,Wide,High
+RU14a M.San Nico,430.36250,431.96250,110.9,,FM,Narrow,High
+RU Albenga,430.47500,435.47500,110.9,,FM,Wide,High
+RU M.Porcile,430.57500,435.57500,110.9,,FM,Wide,High
+RU Monte Fasce,430.73750,435.73750,110.9,,FM,Narrow,High
+RU Ruta,430.91250,435.91250,110.9,,FM,Narrow,High
+RU Poggio Sanrem,430.93750,435.93750,162.2,,FM,Narrow,High
+RU16 M.Telegrafo,431.22500,432.82500,110.9,,FM,Wide,High
+RU16a M.Fasce,431.23750,432.83750,110.9,,FM,Narrow,High
+RU17 M.Telegrafo,431.25000,432.85000,110.9,,FM,Wide,High
+RU19a Loano,431.31250,432.91250,162.2,,FM,Narrow,High
+RU30a La Spezia,431.58750,433.18750,162.2,,FM,Narrow,High

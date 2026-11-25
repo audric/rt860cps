@@ -1,0 +1,38 @@
+# name: RPT Puglia
+# note: Amateur FM repeaters in Puglia (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV San Pancrazio,145.43750,144.83750,82.5,,FM,Narrow,High
+RV-1 M.Celano,145.57500,144.97500,88.5,,FM,Wide,High
+RV-1 Castri,145.57500,144.97500,,,FM,Wide,High
+R0 Mola di Bari,145.60000,145.00000,,,FM,Wide,High
+R0a Cassano Murg,145.61250,145.01250,,,FM,Narrow,High
+R0a Sava,145.61250,145.01250,,,FM,Narrow,High
+R1 Montesardo,145.62500,145.02500,82.5,,FM,Wide,High
+R1a Martinafranc,145.63750,145.03750,82.5,,FM,Narrow,High
+R2 Scorrano,145.65000,145.05000,123.0,,FM,Wide,High
+R2a Putignano,145.66250,145.06250,82.5,,FM,Narrow,High
+R4 Taranto,145.70000,145.10000,82.5,,FM,Wide,High
+R5 Brindisi,145.72500,145.12500,82.5,,FM,Wide,High
+R5a Minervino Mu,145.73750,145.13750,82.5,,FM,Narrow,High
+R6 Parabita,145.75000,145.15000,82.5,,FM,Wide,High
+R7 M.Nero,145.77500,145.17500,,,FM,Wide,High
+R7a Casamassima,145.78750,145.18750,,,FM,Narrow,High
+RV-1a San Donaci,145.78750,145.18750,88.5,,FM,Narrow,High
+R7a Lecce,145.78750,145.18750,82.5,,FM,Narrow,High
+R7a Mottola,145.78750,145.18750,123.0,,FM,Narrow,High
+RU2 Bari,430.05000,435.05000,100.0,,FM,Wide,High
+RU2a Bari,430.08750,435.08750,82.5,,FM,Narrow,High
+RU5 Minervino Mu,430.12500,431.72500,82.5,,FM,Wide,High
+RU5 Mottola,430.12500,431.72500,,,FM,Wide,High
+RU5a Taranto,430.13750,431.73750,,,FM,Narrow,High
+RU6 Cassano Murg,430.15000,431.75000,,,FM,Wide,High
+RU7 Monte Celano,430.17500,431.77500,82.5,,FM,Wide,High
+RU8 Ginosa,430.20000,431.80000,82.5,,FM,Wide,High
+RU11 Rignano Gar,430.27500,435.27500,82.5,,FM,Wide,High
+RU11 Sava,430.27500,435.27500,123.0,,FM,Wide,High
+RU Barletta,430.47500,435.47500,100.0,,FM,Wide,High
+RU Putignano,430.73750,435.73750,82.5,,FM,Narrow,High
+RU19 Lecce,431.30000,432.90000,88.5,,FM,Wide,High
+RU20 Martina Fra,431.32500,432.92500,88.5,,FM,Wide,High
+RU21 Squinzano,431.35000,432.95000,88.5,,FM,Wide,High
+RU24 Bari,431.42500,433.02500,82.5,,FM,Wide,High

@@ -1,0 +1,16 @@
+# name: RPT Umbria
+# note: Amateur FM repeaters in Umbria (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV-1 Assisi,145.57500,144.97500,88.5,,FM,Wide,High
+R0 M.Serano,145.60000,145.00000,,,FM,Wide,High
+R1 Gubbio,145.62500,145.02500,,,FM,Wide,High
+R2a Perugia,145.66250,145.06250,114.8,,FM,Narrow,High
+R3a Gubbio,145.68750,145.08750,,,FM,Narrow,High
+R4 M.Cosce,145.70000,145.10000,114.8,,FM,Wide,High
+R4a Monte Santa,145.71250,145.11250,123.0,,FM,Narrow,High
+R6 Perugia,145.75000,145.15000,114.8,,FM,Wide,High
+RU1 M.Serano,430.02500,431.62500,,,FM,Wide,High
+RU3a M.Tezio,430.08750,431.68750,114.8,,FM,Narrow,High
+RU6 Perugia,430.15000,431.75000,,,FM,Wide,High
+RU8 M.Giove -San,430.20000,431.80000,123.0,,FM,Wide,High
+RU12a Afrile,430.31250,431.91250,114.8,,FM,Narrow,High

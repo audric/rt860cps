@@ -1,0 +1,21 @@
+# name: RPT Marche
+# note: Amateur FM repeaters in Marche (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+R0 M.Ascensione,145.60000,145.00000,127.3,,FM,Wide,High
+R0a M.Conero,145.61250,145.01250,85.4,,FM,Narrow,High
+R1 Monteciccardo,145.62500,145.02500,85.4,,FM,Wide,High
+R1a Force,145.63750,145.03750,85.4,,FM,Narrow,High
+R2 Falconara,145.65000,145.05000,85.4,,FM,Wide,High
+R4 M.La Croce,145.70000,145.10000,,,FM,Wide,High
+R4a San Benedett,145.71250,145.11250,85.4,,FM,Narrow,High
+R7 Potenza Picen,145.77500,145.17500,85.4,,FM,Wide,High
+RU4a Fontecornia,430.11250,431.71250,85.4,,FM,Narrow,High
+RU7 Ancona,430.17500,431.77500,85.4,,FM,Wide,High
+RU8 M.La Croce,430.20000,431.80000,85.4,,FM,Wide,High
+RU9 Senigallia,430.22500,431.82500,85.4,,FM,Wide,High
+RU19 M.Murano,431.30000,432.90000,88.5,,FM,Wide,High
+RU21 Montegriman,431.35000,432.95000,88.5,,FM,Wide,High
+RU28 San Bartolo,431.52500,433.12500,85.4,,FM,Wide,High
+RU29 Falconara,431.55000,433.15000,85.4,,FM,Wide,High
+RU30a Monte Cucc,431.58750,433.18750,85.4,,FM,Narrow,High
+RU31 Monte Aria-,431.60000,433.20000,85.4,,FM,Wide,High

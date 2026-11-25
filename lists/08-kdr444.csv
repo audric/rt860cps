@@ -1,0 +1,11 @@
+# name: KDR444
+# note: Licence-free 444 MHz in Sweden and Norway, 8 channels
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+KDR 1,444.60000,,,,FM,Wide,Low
+KDR 2,444.65000,,,,FM,Wide,Low
+KDR 3,444.80000,,,,FM,Wide,Low
+KDR 4,444.82500,,,,FM,Wide,Low
+KDR 5,444.85000,,,,FM,Wide,Low
+KDR 6,444.87500,,,,FM,Wide,Low
+KDR 7,444.92500,,,,FM,Wide,Low
+KDR 8,444.97500,,,,FM,Wide,Low

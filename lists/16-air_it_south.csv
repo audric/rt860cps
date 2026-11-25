@@ -1,0 +1,46 @@
+# name: Airports IT S
+# note: Italian airports, south, Sicilia and Sardegna: tower, approach, ground, ATIS. AM, for listening
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+LIBA APP,118.85000,,,,AM,Wide,Low
+LIBA TWR,118.20000,,,,AM,Wide,Low
+LIBC AFIS,119.10000,,,,AM,Wide,Low
+LIBD APP,119.50000,,,,AM,Wide,Low
+LIBD TWR,118.30000,,,,AM,Wide,Low
+LIBF AFIS,120.10000,,,,AM,Wide,Low
+LIBG APP,118.70000,,,,AM,Wide,Low
+LIBN APP,118.95000,,,,AM,Wide,Low
+LIBN TWR,119.55000,,,,AM,Wide,Low
+LIBR APP,118.40000,,,,AM,Wide,Low
+LIBR TWR,118.10000,,,,AM,Wide,Low
+LIBV APP,122.10000,,,,AM,Wide,Low
+LICA APP,118.80000,,,,AM,Wide,Low
+LICA TWR,119.70000,,,,AM,Wide,Low
+LICC APP,119.25000,,,,AM,Wide,Low
+LICC DIR,120.80000,,,,AM,Wide,Low
+LICC GND,129.72500,,,,AM,Wide,Low
+LICG TWR,118.45000,,,,AM,Wide,Low
+LICJ APP,120.20000,,,,AM,Wide,Low
+LICJ ATIS,123.87500,,,,AM,Wide,Low
+LICJ GND,121.62500,,,,AM,Wide,Low
+LICJ TWR,119.05000,,,,AM,Wide,Low
+LICR APP,120.27500,,,,AM,Wide,Low
+LICR TWR,118.25000,,,,AM,Wide,Low
+LICT APP,119.95000,,,,AM,Wide,Low
+LICZ GND,121.95000,,,,AM,Wide,Low
+LICZ TWR,118.05000,,,,AM,Wide,Low
+LIEA APP,128.55000,,,,AM,Wide,Low
+LIEA ATIS,125.02500,,,,AM,Wide,Low
+LIED APP,118.75000,,,,AM,Wide,Low
+LIEE GND,125.42500,,,,AM,Wide,Low
+LIEE TWR,120.60000,,,,AM,Wide,Low
+LIEO APP,125.95000,,,,AM,Wide,Low
+LIEO TWR,118.97500,,,,AM,Wide,Low
+LIET AFIS,119.65000,,,,AM,Wide,Low
+LIRI AFIS,119.17500,,,,AM,Wide,Low
+LIRM TWR,118.02500,,,,AM,Wide,Low
+LIRN APP,124.35000,,,,AM,Wide,Low
+LIRN ATIS,135.97500,,,,AM,Wide,Low
+LIRN DIR,120.95000,,,,AM,Wide,Low
+LIRN DEL,121.90000,,,,AM,Wide,Low
+LIRN OPS,118.27500,,,,AM,Wide,Low
+LIRN TWR,118.50000,,,,AM,Wide,Low

@@ -1,0 +1,9 @@
+# name: RPT Molise
+# note: Amateur FM repeaters in Molise (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+R0a Matrice,145.61250,145.01250,103.5,,FM,Narrow,High
+R3a S.Angelo Lim,145.68750,145.08750,103.5,,FM,Narrow,High
+R6 M.Patalecchia,145.75000,145.15000,103.5,,FM,Wide,High
+RU5 Campobasso,430.12500,431.72500,103.5,,FM,Wide,High
+RU6 Rionero Sann,430.15000,435.15000,103.5,,FM,Wide,High
+RU6a Guglionesi,430.16250,431.76250,103.5,,FM,Narrow,High

@@ -1,0 +1,8 @@
+# name: MURS
+# note: USA 151/154 MHz, 5 channels
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+MURS 1,151.82000,,,,FM,Narrow,Low
+MURS 2,151.88000,,,,FM,Narrow,Low
+MURS 3,151.94000,,,,FM,Narrow,Low
+MURS 4,154.57000,,,,FM,Wide,Low
+MURS 5,154.60000,,,,FM,Wide,Low

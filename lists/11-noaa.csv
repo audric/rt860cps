@@ -1,0 +1,10 @@
+# name: NOAA weather
+# note: USA and Canada weather broadcasts, listen only
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+NOAA WX1,162.55000,,,,FM,Wide,Low
+NOAA WX2,162.40000,,,,FM,Wide,Low
+NOAA WX3,162.47500,,,,FM,Wide,Low
+NOAA WX4,162.42500,,,,FM,Wide,Low
+NOAA WX5,162.45000,,,,FM,Wide,Low
+NOAA WX6,162.50000,,,,FM,Wide,Low
+NOAA WX7,162.52500,,,,FM,Wide,Low

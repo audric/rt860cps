@@ -1,0 +1,110 @@
+name: build
+
+# Every push and pull request is built and tested on both Linux architectures and
+# for Windows. Pushing a tag like v0.1.0 also publishes a release with the packages.
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.arch }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: amd64          # PCs
+            runner: ubuntu-24.04
+          - arch: arm64          # Raspberry Pi, 64-bit Raspberry Pi OS
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
+    # Built on Debian 12 so the packages install on Debian 12+, Raspberry Pi OS
+    # Bookworm+ and Ubuntu 24.04+.
+    container: debian:bookworm
+    steps:
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates git g++ cmake ninja-build qt6-base-dev libgl1-mesa-dev dpkg-dev file
+
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        shell: bash
+        run: |
+          args=(-S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr)
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then args+=("-DRT860_VERSION=${GITHUB_REF_NAME#v}"); fi
+          cmake "${args[@]}"
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Package
+        working-directory: build
+        run: |
+          cpack -G "DEB;TGZ"
+          ls -l *.deb *.tar.gz
+          dpkg-deb --info *.deb
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rt860cps-${{ matrix.arch }}
+          path: |
+            build/*.deb
+            build/*.tar.gz
+          if-no-files-found: error
+
+  windows:
+    name: windows x64
+    # Cross-built on Linux with MinGW-w64, the same way as on a developer's machine.
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            cmake ninja-build zip pipx g++-mingw-w64-x86-64-posix
+
+      - uses: actions/checkout@v4
+
+      - name: Build and package
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then tools/build-windows.sh "${GITHUB_REF_NAME#v}"; else tools/build-windows.sh; fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rt860cps-windows-x64
+          path: build-win/*.zip
+          if-no-files-found: error
+
+  release:
+    name: publish release
+    if: github.ref_type == 'tag'
+    needs: [build, windows]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "RT-860 CPS $GITHUB_REF_NAME" \
+            --generate-notes

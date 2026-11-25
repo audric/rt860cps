@@ -1,0 +1,58 @@
+# name: RPT Toscana
+# note: Amateur FM repeaters in Toscana (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV Scarperia,145.46250,144.86250,79.7,,FM,Narrow,High
+RV Treggiaia Pon,145.53750,144.93750,79.7,,FM,Narrow,High
+RV-1a M.Amiata,145.58750,144.98750,79.7,,FM,Narrow,High
+R0 M.Pizzorne,145.60000,145.00000,79.7,,FM,Wide,High
+R0a Alpe di Cate,145.61250,145.01250,79.7,,FM,Narrow,High
+R0a Montecatini,145.61250,145.01250,79.7,,FM,Narrow,High
+R1 Alpe di Poti,145.62500,145.02500,,,FM,Wide,High
+R1 Castellaccio,145.62500,145.02500,,,FM,Wide,High
+R2 M.Amiata,145.65000,145.05000,79.7,,FM,Wide,High
+R3 Montieri,145.67500,145.07500,79.7,,FM,Wide,High
+R4 Sensano,145.70000,145.10000,79.7,,FM,Wide,High
+R4a M.Labro,145.71250,145.11250,79.7,,FM,Narrow,High
+R5 San Vincenzo,145.72500,145.12500,79.7,,FM,Wide,High
+R5 M.Meto,145.72500,145.12500,,,FM,Wide,High
+R5 Prato,145.72500,145.12500,79.7,,FM,Wide,High
+R5a Poggio Valic,145.73750,145.13750,146.2,,FM,Narrow,High
+R5a Cima del Mon,145.73750,145.13750,79.7,,FM,Narrow,High
+R6 M.Secchieta,145.75000,145.15000,,,FM,Wide,High
+R6 Campocecina,145.75000,145.15000,,,FM,Wide,High
+R6a Montecatini,145.76250,145.16250,79.7,,FM,Narrow,High
+R7 Siena,145.77500,145.17500,,,FM,Wide,High
+R7a M.Secchieta,145.78750,145.18750,79.7,,FM,Narrow,High
+RU1 Coltano Marc,430.02500,435.02500,79.7,,FM,Wide,High
+RU2 Sensano,430.05000,431.65000,79.7,,FM,Wide,High
+RU3 Montieri,430.07500,431.67500,79.7,,FM,Wide,High
+RU5 Alpe di Cate,430.12500,431.72500,146.2,,FM,Wide,High
+RU5 Prato,430.12500,431.72500,79.7,,FM,Wide,High
+RU5a San Vincenz,430.13750,431.73750,,,FM,Narrow,High
+RU6 Poggio Rosel,430.15000,435.15000,79.7,,FM,Wide,High
+RU6 Campocecina,430.15000,431.75000,79.7,,FM,Wide,High
+RU8 M.Pizzorne,430.20000,431.80000,79.7,,FM,Wide,High
+RU9a Montalbano,430.23750,431.83750,,,FM,Narrow,High
+RU13 Poggio Vali,430.32500,431.92500,146.2,,FM,Wide,High
+RU14a Poggio Fir,430.36250,431.96250,,,FM,Narrow,High
+RU15 Isola d'Elb,430.37500,431.97500,79.7,,FM,Wide,High
+RU Sepoltaglia,430.40000,435.40000,71.9,,FM,Wide,High
+RU Val Bisenzio,430.40000,435.40000,79.7,,FM,Wide,High
+RU Val Bisenzi 2,430.42500,435.42500,79.7,,FM,Wide,High
+RU Sensano,430.47500,435.47500,79.7,,FM,Wide,High
+RU Montalbano- P,430.50000,432.10000,79.7,,FM,Wide,High
+RU Monte Capanne,430.52500,435.52500,79.7,,FM,Wide,High
+RU Castra,430.75000,435.75000,79.7,,FM,Wide,High
+RU Val Bisenzi 3,430.75000,435.75000,79.7,,FM,Wide,High
+RU Monte Giovi,430.77500,435.77500,,,FM,Wide,High
+RU Monte Giovi 2,430.85000,435.85000,79.7,,FM,Wide,High
+RU17 Monte Casel,431.25000,432.85000,79.7,,FM,Wide,High
+RU17a Volterra,431.26250,432.86250,79.7,,FM,Narrow,High
+RU18 Campocecina,431.27500,432.87500,,,FM,Wide,High
+RU20 M.Aquilaia,431.32500,432.92500,79.7,,FM,Wide,High
+RU21 M.Amiata,431.35000,432.95000,79.7,,FM,Wide,High
+RU21 Poggio Cili,431.35000,432.95000,,,FM,Wide,High
+RU22 M.Amiata,431.37500,432.97500,88.5,,FM,Wide,High
+RU26a M.Cascetto,431.48750,433.08750,79.7,,FM,Narrow,High
+RU30a M.Lignano,431.58750,433.18750,79.7,,FM,Narrow,High
+RU31a M.Serra,431.61250,433.21250,79.7,,FM,Narrow,High

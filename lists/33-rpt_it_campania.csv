@@ -1,0 +1,38 @@
+# name: RPT Campania
+# note: Amateur FM repeaters in Campania (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV-1a M.Vesuvio,145.58750,144.98750,71.9,,FM,Narrow,High
+RV-1a Santa Mari,145.58750,144.98750,,,FM,Narrow,High
+R1 Pozzuoli,145.62500,145.02500,71.9,,FM,Wide,High
+R1a Pietraroja,145.63750,145.03750,118.8,,FM,Narrow,High
+R1a M.Stella Cil,145.63750,145.03750,71.9,,FM,Narrow,High
+R2 M.Epomeo,145.65000,145.05000,71.9,,FM,Wide,High
+R4 Caserta,145.70000,145.10000,71.9,,FM,Wide,High
+R4 Sala Consilin,145.70000,145.10000,,,FM,Wide,High
+R5 Chiusano San,145.72500,145.12500,118.8,,FM,Wide,High
+R5a San Marco ai,145.73750,145.13750,94.8,,FM,Narrow,High
+R5a Perdifumo,145.73750,145.13750,88.5,,FM,Narrow,High
+R6 M.Pizzone,145.75000,145.15000,71.9,,FM,Wide,High
+R6a Trevico -Cas,145.76250,145.16250,118.8,,FM,Narrow,High
+R6a Portici,145.76250,145.16250,71.9,,FM,Narrow,High
+R6a M.Tubenna,145.76250,145.16250,71.9,,FM,Narrow,High
+R7 m. S. Liberat,145.77500,145.17500,,,FM,Wide,High
+RU1 Capua,430.02500,431.62500,71.9,,FM,Wide,High
+RU1 Napoli,430.02500,431.62500,71.9,,FM,Wide,High
+RU1a Salerno,430.03750,435.03750,71.9,,FM,Narrow,High
+RU3 Nocera Infer,430.07500,431.67500,71.9,,FM,Wide,High
+RU4a Casoria,430.11250,431.71250,,,FM,Narrow,High
+RU6a Procida,430.16250,435.16250,71.9,,FM,Narrow,High
+RU7 Perdifumo,430.17500,435.17500,71.9,,FM,Wide,High
+RU7 M.S. Liberat,430.17500,431.77500,,,FM,Wide,High
+RU8 M.Nebulano -,430.20000,431.80000,,,FM,Wide,High
+RU8a Montevergin,430.21250,431.81250,118.8,,FM,Narrow,High
+RU12 M.Vergine,430.30000,431.90000,71.9,,FM,Wide,High
+RU15 M.S.Angelo,430.37500,431.97500,71.9,,FM,Wide,High
+RU M.Vergine,430.50000,435.50000,118.8,,FM,Wide,High
+RU Siano,430.71250,435.71250,94.8,,FM,Narrow,High
+RU16 M.Epomeo,431.22500,432.82500,88.5,,FM,Wide,High
+RU20 Casal di Pr,431.32500,432.92500,71.9,,FM,Wide,High
+RU21 M.Epomeo,431.35000,432.95000,88.5,,FM,Wide,High
+RU24 M.Epomeo,431.42500,433.02500,71.9,,FM,Wide,High
+RU30 Sant'Egidio,431.57500,433.17500,71.9,,FM,Wide,High

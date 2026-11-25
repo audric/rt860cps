@@ -1,0 +1,59 @@
+# name: RPT Lombardia
+# note: Amateur FM repeaters in Lombardia (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+E M.Guglielmo,145.21250,144.61250,156.7,,FM,Narrow,High
+RV-1a Gallarate,145.58750,144.98750,156.7,,FM,Narrow,High
+R0 M.Canto,145.60000,145.00000,71.9,,FM,Wide,High
+R1 M.Maddalena,145.62500,145.02500,71.9,,FM,Wide,High
+R1 Campo dei Fio,145.62500,145.02500,156.7,,FM,Wide,High
+R1a Gravedona ed,145.63750,145.03750,71.9,,FM,Narrow,High
+R2 M.Penice,145.65000,145.05000,156.7,,FM,Wide,High
+R2a M.Cornizzolo,145.66250,145.06250,71.9,,FM,Narrow,High
+R2a Monte della,145.66250,145.06250,,,FM,Narrow,High
+R3a San Felice d,145.68750,145.08750,156.7,,FM,Narrow,High
+R3a Brunate CO),145.68750,145.08750,71.9,,FM,Narrow,High
+R3a M.Rolla,145.68750,145.08750,156.7,,FM,Narrow,High
+R4 Azzano S.Paol,145.70000,145.10000,71.9,,FM,Wide,High
+R4a M.Bisbino,145.71250,145.11250,71.9,,FM,Narrow,High
+R5 Milano,145.72500,145.12500,71.9,,FM,Wide,High
+R5 Aprica -Magno,145.72500,145.12500,,,FM,Wide,High
+R5a Campo dei Fi,145.73750,145.13750,71.9,,FM,Narrow,High
+R6 Cernusco S.N.,145.75000,145.15000,71.9,,FM,Wide,High
+R6a Sellero,145.76250,145.16250,71.9,,FM,Narrow,High
+R7 M.Bue,145.77500,145.17500,,,FM,Wide,High
+R7a San Giovanni,145.78750,145.18750,156.7,,FM,Narrow,High
+R7a Brescia,145.78750,145.18750,156.7,,FM,Narrow,High
+R7a M.Boletto,145.78750,145.18750,71.9,,FM,Narrow,High
+R7a Aprica,145.78750,145.18750,88.5,,FM,Narrow,High
+RU1 Brunate,430.02500,431.62500,156.7,,FM,Wide,High
+RU3 Monte Canto,430.07500,431.67500,71.9,,FM,Wide,High
+RU3 M.Penice,430.07500,431.67500,156.7,,FM,Wide,High
+RU4 Milano,430.10000,431.70000,71.9,,FM,Wide,High
+RU4a Lecco,430.11250,431.71250,71.9,,FM,Narrow,High
+RU6 Bergamo,430.15000,431.75000,,,FM,Wide,High
+RU6a M.Falecchio,430.16250,431.76250,71.9,,FM,Narrow,High
+RU6a S.Giovanni,430.16250,431.76250,156.7,,FM,Narrow,High
+RU7 Milano,430.17500,431.77500,71.9,,FM,Wide,High
+RU7a M.Bisbino,430.18750,431.78750,156.7,,FM,Narrow,High
+RU8 Roncola,430.20000,431.80000,71.9,,FM,Wide,High
+RU10a Milano,430.26250,431.86250,71.9,,FM,Narrow,High
+RU11 M.Guglielmo,430.27500,431.87500,71.9,,FM,Wide,High
+RU12 Monte Campi,430.30000,431.90000,88.5,,FM,Wide,High
+RU12a Magenta,430.31250,431.91250,71.9,,FM,Narrow,High
+RU13 Roncola,430.32500,431.92500,71.9,,FM,Wide,High
+RU Dorno,430.45000,435.45000,71.9,,FM,Wide,High
+RU Rivoltella de,430.52500,435.52500,71.9,,FM,Wide,High
+RU17 Montemezzo-,431.25000,432.85000,88.5,,FM,Wide,High
+RU17 M.Penice,431.25000,432.85000,71.9,,FM,Wide,High
+RU19 M.Penice,431.30000,432.90000,71.9,,FM,Wide,High
+RU20 Campo dei F,431.32500,432.92500,71.9,,FM,Wide,High
+RU20a Almenno S.,431.33750,432.93750,71.9,,FM,Narrow,High
+RU20a Veddasca,431.33750,432.93750,123.0,,FM,Narrow,High
+RU21a M.Bisbino,431.36250,432.96250,71.9,,FM,Narrow,High
+RU22 Magnolta,431.37500,432.97500,88.5,,FM,Wide,High
+RU23 Cassolnovo,431.40000,433.00000,,,FM,Wide,High
+RU25 Campo dei F,431.45000,433.05000,71.9,,FM,Wide,High
+RU26a M.Maddalen,431.48750,433.08750,156.7,,FM,Narrow,High
+RU29 M.Sasso del,431.55000,433.15000,71.9,,FM,Wide,High
+RU29a Sacro Mont,431.56250,433.16250,71.9,,FM,Narrow,High
+RU30 Valcava,431.57500,433.17500,71.9,,FM,Wide,High

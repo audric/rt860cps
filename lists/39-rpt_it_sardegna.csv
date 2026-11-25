@@ -1,0 +1,28 @@
+# name: RPT Sardegna
+# note: Amateur FM repeaters in Sardegna (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+R0 M.Rasu,145.60000,145.00000,74.4,,FM,Wide,High
+R1 Arbus,145.62500,145.02500,67.0,,FM,Wide,High
+R1 Punta Tricoli,145.62500,145.02500,74.4,,FM,Wide,High
+R2 Punta Sebera,145.65000,145.05000,103.5,,FM,Wide,High
+R2a Cabu Aspru,145.66250,145.06250,74.4,,FM,Narrow,High
+R3 M.Tului-Dorga,145.67500,145.07500,74.4,,FM,Wide,High
+R4 Monte Genn'Ar,145.70000,145.10000,107.2,,FM,Wide,High
+R4 Abbasanta,145.70000,145.10000,74.4,,FM,Wide,High
+R4 M.Plebi,145.70000,145.10000,74.4,,FM,Wide,High
+R5 M.Ortobene,145.72500,145.12500,74.4,,FM,Wide,High
+R6 Montiferru,145.75000,145.15000,74.4,,FM,Wide,High
+R7 Bruncu Spina,145.77500,145.17500,,,FM,Wide,High
+R7a Ittiri,145.78750,145.18750,88.5,,FM,Narrow,High
+RU1 Limbara,430.02500,431.62500,,,FM,Wide,High
+RU2 M.Serpeddi,430.05000,431.65000,,,FM,Wide,High
+RU2 M.Ortobene,430.05000,431.65000,74.4,,FM,Wide,High
+RU5 M.Coremo,430.12500,431.72500,,,FM,Wide,High
+RU5 Abbasanta,430.12500,431.72500,74.4,,FM,Wide,High
+RU6 M.Tului-Dorg,430.15000,431.75000,74.4,,FM,Wide,High
+RU7 Lanusei-M.Ar,430.17500,431.77500,,,FM,Wide,High
+RU9 M.Moro,430.22500,431.82500,74.4,,FM,Wide,High
+RU12 Bruncu Nied,430.30000,431.90000,88.5,,FM,Wide,High
+RU Cabras,430.40000,435.40000,85.4,,FM,Wide,High
+RU M.Limbara,430.72500,435.72500,74.4,,FM,Wide,High
+RU31 Punta Trico,431.60000,433.20000,74.4,,FM,Wide,High

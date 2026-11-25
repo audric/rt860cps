@@ -1,0 +1,46 @@
+# name: RPT Calabria
+# note: Amateur FM repeaters in Calabria (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV Barrittieri d,145.30000,144.70000,107.2,,FM,Wide,High
+RV-1a Serra Scri,145.58750,144.98750,107.2,,FM,Narrow,High
+RV-1a Monte San,145.58750,144.98750,107.2,,FM,Narrow,High
+R0 M.S.Elia,145.60000,145.00000,141.3,,FM,Wide,High
+R0a M.Poro,145.61250,145.01250,107.2,,FM,Narrow,High
+R1 Crotone,145.62500,145.02500,88.5,,FM,Wide,High
+R1 Montechiarell,145.62500,145.02500,107.2,,FM,Wide,High
+R1 M.S.Andrea,145.62500,145.02500,141.3,,FM,Wide,High
+R2 Catanzaro,145.65000,145.05000,,,FM,Wide,High
+R2 San Nicola de,145.65000,145.05000,141.3,,FM,Wide,High
+R2a M.Portella,145.66250,145.06250,141.3,,FM,Narrow,High
+R2a San Lorenzo,145.66250,145.06250,107.2,,FM,Narrow,High
+R3 Pentimele,145.67500,145.07500,107.2,,FM,Wide,High
+R3a Villa San Gi,145.68750,145.08750,79.7,,FM,Narrow,High
+R3a Joppolo,145.68750,145.08750,107.2,,FM,Narrow,High
+R4 M.Palatino-Ga,145.70000,145.10000,107.2,,FM,Wide,High
+R4a M.Botte Dona,145.71250,145.11250,107.2,,FM,Narrow,High
+R4a Villa San Gi,145.71250,145.11250,79.7,,FM,Narrow,High
+R5 Lappano,145.72500,145.12500,,,FM,Wide,High
+R5 San Vito Serr,145.72500,145.12500,107.2,,FM,Wide,High
+R5 Villa San Gio,145.72500,145.12500,79.7,,FM,Wide,High
+R6 Rocella Ionic,145.75000,145.15000,107.2,,FM,Wide,High
+R7 M.Cozzo Cerve,145.77500,145.17500,,,FM,Wide,High
+R7 M.Scifo,145.77500,145.17500,,,FM,Wide,High
+R7 Fortini di Pe,145.77500,145.17500,94.8,,FM,Wide,High
+R7a S.Cristina d,145.78750,145.18750,107.2,,FM,Narrow,High
+R7a Villa San Gi,145.78750,145.18750,79.7,,FM,Narrow,High
+RU1 Lappano,430.02500,435.02500,,,FM,Wide,High
+RU1 S.Stefano d',430.02500,431.62500,107.2,,FM,Wide,High
+RU3 San Giovanni,430.07500,431.67500,,,FM,Wide,High
+RU4 Petrona',430.10000,431.70000,107.2,,FM,Wide,High
+RU5a Campicello,430.13750,431.73750,94.8,,FM,Narrow,High
+RU6 Serra Crista,430.15000,431.75000,107.2,,FM,Wide,High
+RU7 Monte Scuro,430.17500,431.77500,,,FM,Wide,High
+RU8 M.S.Elia,430.20000,431.80000,141.3,,FM,Wide,High
+RU9 Pietrapennat,430.22500,431.82500,,,FM,Wide,High
+RU12 Villa San G,430.30000,435.30000,88.5,,FM,Wide,High
+RU12 Villa San 2,430.30000,431.90000,88.5,,FM,Wide,High
+RU13 Villa San G,430.32500,431.92500,79.7,,FM,Wide,High
+RU15 Villa San G,430.37500,431.97500,,,FM,Wide,High
+RU Villa San Gio,430.75000,432.35000,79.7,,FM,Wide,High
+RU28a Villa San,431.53750,433.13750,,,FM,Narrow,High
+RU30a S.Stefano,431.58750,433.18750,127.3,,FM,Narrow,High

@@ -1,0 +1,68 @@
+# name: RPT Piemonte
+# note: Amateur FM repeaters in Piemonte (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV Bric di Pui,145.26250,144.66250,82.5,,FM,Narrow,High
+R0 Cossato,145.60000,145.00000,82.5,,FM,Wide,High
+R0 Cesana Torine,145.60000,145.00000,123.0,,FM,Wide,High
+R0 Frassinetto,145.60000,145.00000,127.3,,FM,Wide,High
+R0a Alba,145.61250,145.01250,82.5,,FM,Narrow,High
+R0a M.Mottarone,145.61250,145.01250,127.3,,FM,Narrow,High
+R1 Graglia,145.62500,145.02500,127.3,,FM,Wide,High
+R1 Mombarcaro,145.62500,145.02500,82.5,,FM,Wide,High
+R1a Asti,145.63750,145.03750,88.5,,FM,Narrow,High
+R1a Susa,145.63750,145.03750,107.2,,FM,Narrow,High
+R2a Roccaverano,145.66250,145.06250,127.3,,FM,Narrow,High
+R3a Casale Monfe,145.68750,145.08750,127.3,,FM,Narrow,High
+R3a Bardonecchia,145.68750,145.08750,123.0,,FM,Narrow,High
+R4 Arona,145.70000,145.10000,131.8,,FM,Wide,High
+R4 Alpe Colombin,145.70000,145.10000,82.5,,FM,Wide,High
+R4a M.Dagno-Nizz,145.71250,145.11250,82.5,,FM,Narrow,High
+R5 S.Michele Mon,145.72500,145.12500,82.5,,FM,Wide,High
+R5 Susa,145.72500,145.12500,123.0,,FM,Wide,High
+R5a Costigliole,145.73750,145.13750,82.5,,FM,Narrow,High
+R6 Bric dell'Oli,145.75000,145.15000,127.3,,FM,Wide,High
+R6 Bagnolo Piemo,145.75000,145.15000,82.5,,FM,Wide,High
+R6 M.Moncucco,145.75000,145.15000,67.0,,FM,Wide,High
+R6a Fracconalto,145.76250,145.16250,162.2,,FM,Narrow,High
+R6a Mondovi',145.76250,145.16250,127.3,,FM,Narrow,High
+R6a Sestriere,145.76250,145.16250,107.2,,FM,Narrow,High
+R6a Castellamont,145.76250,145.16250,82.5,,FM,Narrow,High
+R6a Torino,145.76250,145.16250,67.0,,FM,Narrow,High
+R7 Novi Ligure,145.77500,145.17500,82.5,,FM,Wide,High
+R7a Neviglie,145.78750,145.18750,82.5,,FM,Narrow,High
+R7a Superga,145.78750,145.18750,67.0,,FM,Narrow,High
+RU1 Bardonecchia,430.02500,431.62500,114.8,,FM,Wide,High
+RU1 Trontano,430.02500,431.62500,82.5,,FM,Wide,High
+RU2 M.Malanotte,430.05000,431.65000,82.5,,FM,Wide,High
+RU3 Mondovi',430.07500,431.67500,82.5,,FM,Wide,High
+RU5 Mongardino,430.12500,431.72500,127.3,,FM,Wide,High
+RU6 Corio,430.15000,431.75000,82.5,,FM,Wide,High
+RU6a M.Mottarone,430.16250,431.76250,127.3,,FM,Narrow,High
+RU8a La Morra,430.21250,431.81250,82.5,,FM,Narrow,High
+RU8a M.Moncucco,430.21250,431.81250,127.3,,FM,Narrow,High
+RU9 Acqui Terme,430.22500,431.82500,94.8,,FM,Wide,High
+RU10 Perosa Arge,430.25000,431.85000,82.5,,FM,Wide,High
+RU10a Serravalle,430.26250,431.86250,82.5,,FM,Narrow,High
+RU12 Roccabruna,430.30000,431.90000,82.5,,FM,Wide,High
+RU13 Pralungo,430.32500,435.32500,127.3,,FM,Wide,High
+RU13a Cocconato,430.33750,431.93750,127.3,,FM,Narrow,High
+RU14 Bric della,430.35000,431.95000,82.5,,FM,Wide,High
+RU14a Belforte M,430.36250,431.96250,82.5,,FM,Narrow,High
+RU15 Roccaverano,430.37500,431.97500,127.3,,FM,Wide,High
+RU Valenza,430.42500,435.42500,100.0,,FM,Wide,High
+RU Bagnolo Piemo,430.42500,435.42500,82.5,,FM,Wide,High
+RU Castagneto Po,430.55000,435.55000,82.5,,FM,Wide,High
+RU Castagneto 2,430.55000,435.55000,82.5,,FM,Wide,High
+RU M.Garne',430.57500,435.57500,123.0,,FM,Wide,High
+RU Bagnolo Pie 2,430.60000,435.60000,127.3,,FM,Wide,High
+RU Torino,430.61250,435.61250,67.0,,FM,Narrow,High
+RU Giarolo,430.76250,435.76250,82.5,,FM,Narrow,High
+RU16a Celle-Vill,431.23750,432.83750,94.8,,FM,Narrow,High
+RU19a M.Giarolo,431.31250,432.91250,127.3,,FM,Narrow,High
+RU24 Alpe Colomb,431.42500,433.02500,82.5,,FM,Wide,High
+RU24 Alpe Colo 2,431.42500,433.02500,82.5,,FM,Wide,High
+RU25a Coniolo,431.46250,433.06250,82.5,,FM,Narrow,High
+RU26 M.Giarolo,431.47500,433.07500,127.3,,FM,Wide,High
+RU28a Torino,431.53750,433.13750,82.5,,FM,Narrow,High
+RU29a Lussito,431.56250,433.16250,82.5,,FM,Narrow,High
+RU32a M.Mottaron,431.63750,433.23750,131.8,,FM,Narrow,High

@@ -1,0 +1,68 @@
+# name: RPT Lazio
+# note: Amateur FM repeaters in Lazio (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV Rocca di Papa,145.35000,144.75000,88.5,,FM,Wide,High
+RV M.Gennaro,145.37500,144.77500,67.0,,FM,Wide,High
+RV Vigna di Vall,145.42500,144.82500,67.0,,FM,Wide,High
+RV M.Cavo,145.45000,144.85000,67.0,,FM,Wide,High
+RV Campocatino,145.56250,144.96250,77.0,,FM,Narrow,High
+RV-1 Rocca Prior,145.57500,144.97500,67.0,,FM,Wide,High
+R0 Montecassino,145.60000,145.00000,67.0,,FM,Wide,High
+R0 M.Circeo,145.60000,145.00000,118.8,,FM,Wide,High
+R0 Capranica Pre,145.60000,145.00000,156.7,,FM,Wide,High
+R0a Allumiere,145.61250,145.01250,67.0,,FM,Narrow,High
+R1 M.Guadagnolo,145.62500,145.02500,67.0,,FM,Wide,High
+R1a Tivoli,145.63750,145.03750,67.0,,FM,Narrow,High
+R1a M.Artemisio,145.63750,145.03750,156.7,,FM,Narrow,High
+R2 Rocca Priora,145.65000,145.05000,67.0,,FM,Wide,High
+R2a M.Trevi- Sez,145.66250,145.06250,88.5,,FM,Narrow,High
+R3 Saracinesco,145.67500,145.07500,67.0,,FM,Wide,High
+R3a Campocatino,145.68750,145.08750,88.5,,FM,Narrow,High
+R4a M.Scalambra,145.71250,145.11250,156.7,,FM,Narrow,High
+R5 M.Leucio-Pont,145.72500,145.12500,67.0,,FM,Wide,High
+R5 M.Terminillo,145.72500,145.12500,67.0,,FM,Wide,High
+R5a Spigno Satur,145.73750,145.13750,103.5,,FM,Narrow,High
+R6 Campocatino,145.75000,145.15000,,,FM,Wide,High
+R6a Castellonora,145.76250,145.16250,67.0,,FM,Narrow,High
+R6a M.Cimini,145.76250,145.16250,88.5,,FM,Narrow,High
+R7 Santo Padre,145.77500,145.17500,,,FM,Wide,High
+R7 Monti Sabini,145.77500,145.17500,,,FM,Wide,High
+R7a Ponza,145.78750,145.18750,118.8,,FM,Narrow,High
+R7a M.Guadagnolo,145.78750,145.18750,67.0,,FM,Narrow,High
+RU1 Santa Marine,430.02500,431.62500,67.0,,FM,Wide,High
+RU2 Allumiere,430.05000,431.65000,,,FM,Wide,High
+RU2a Rocca di Ca,430.06250,431.66250,67.0,,FM,Narrow,High
+RU3 Frosinone,430.07500,431.67500,67.0,,FM,Wide,High
+RU3 M.Terminillo,430.07500,431.67500,67.0,,FM,Wide,High
+RU4 M.Scalambra,430.10000,431.70000,67.0,,FM,Wide,High
+RU4 Gaeta,430.10000,435.10000,103.5,,FM,Wide,High
+RU4 M.Calcarone,430.10000,431.70000,67.0,,FM,Wide,High
+"RU4a M,Calvo",430.11250,435.11250,103.5,,FM,Narrow,High
+RU5 M.Guadagnolo,430.12500,431.72500,67.0,,FM,Wide,High
+RU6 M.Gennaro,430.15000,431.75000,,,FM,Wide,High
+RU7 Campocatino,430.17500,431.77500,67.0,,FM,Wide,High
+RU7 M.Cosce,430.17500,431.77500,114.8,,FM,Wide,High
+RU8 Formia,430.20000,431.80000,156.7,,FM,Wide,High
+RU8 M.Maggiore,430.20000,431.80000,,,FM,Wide,High
+RU9 Monte Belved,430.22500,431.82500,67.0,,FM,Wide,High
+RU10 Rocca Massi,430.25000,431.85000,67.0,,FM,Wide,High
+RU10 M.Tiburtini,430.25000,435.25000,67.0,,FM,Wide,High
+RU12 M.Gennaro,430.30000,431.90000,67.0,,FM,Wide,High
+RU12a Ariccia,430.31250,435.31250,67.0,,FM,Narrow,High
+RU15 M.Cavo,430.37500,431.97500,67.0,,FM,Wide,High
+RU Rocca Priora,430.38750,431.98750,67.0,,FM,Narrow,High
+RU Scandriglia,430.40000,435.40000,100.0,,FM,Wide,High
+RU Campo Catino,430.45000,435.45000,67.0,,FM,Wide,High
+RU Anguillara Sa,430.47500,435.47500,67.0,,FM,Wide,High
+RU M.Trevi,430.65000,435.65000,67.0,,FM,Wide,High
+RU M.Trevi 2,430.70000,435.70000,88.5,,FM,Wide,High
+RU Roccasecca de,430.76250,435.76250,,,FM,Narrow,High
+RU Sezze,430.80000,435.80000,88.5,,FM,Wide,High
+RU16a Pomezia,431.23750,432.83750,67.0,,FM,Narrow,High
+RU18 Rocca Prior,431.27500,432.87500,88.5,,FM,Wide,High
+RU20 Monte Mario,431.32500,432.92500,67.0,,FM,Wide,High
+RU22 Anzio,431.37500,432.97500,85.4,,FM,Wide,High
+RU23 Civitavecch,431.40000,433.00000,67.0,,FM,Wide,High
+RU24 Vivaro Roma,431.42500,433.02500,67.0,,FM,Wide,High
+RU26 Velletri,431.47500,433.07500,67.0,,FM,Wide,High
+RU Montecompatri,433.80000,435.40000,67.0,,FM,Wide,High

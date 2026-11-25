@@ -1,0 +1,33 @@
+# name: RPT Abruzzo
+# note: Amateur FM repeaters in Abruzzo (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV-1a M.Maiella,145.58750,144.98750,97.4,,FM,Narrow,High
+R0 Le Serre di G,145.60000,145.00000,,,FM,Wide,High
+R1 Campo Imperat,145.62500,145.02500,97.4,,FM,Wide,High
+R2a M.Freddo,145.66250,145.06250,97.4,,FM,Narrow,High
+R2a M.Maielletta,145.66250,145.06250,110.9,,FM,Narrow,High
+R3 Colle SanGiac,145.67500,145.07500,97.4,,FM,Wide,High
+R3 Santo Stefano,145.67500,145.07500,88.5,,FM,Wide,High
+R4 M.Maiella,145.70000,145.10000,,,FM,Wide,High
+R4a Roccaraso,145.71250,145.11250,88.5,,FM,Narrow,High
+R5 Colle Badette,145.72500,145.12500,88.5,,FM,Wide,High
+R6 Prati di Tivo,145.75000,145.15000,88.5,,FM,Wide,High
+R6a Liscia,145.76250,145.16250,123.0,,FM,Narrow,High
+RU1 Barrea,430.02500,431.62500,97.4,,FM,Wide,High
+RU1 M.Piselli,430.02500,431.62500,85.4,,FM,Wide,High
+RU2 Roseto Abruz,430.05000,431.65000,,,FM,Wide,High
+RU3a M.Maiellett,430.08750,431.68750,88.5,,FM,Narrow,High
+RU5 M.Ocre,430.12500,431.72500,97.4,,FM,Wide,High
+RU6a M.Scindarel,430.16250,435.16250,97.4,,FM,Narrow,High
+RU7 M.Freddo,430.17500,431.77500,97.4,,FM,Wide,High
+RU8 M.Maiella,430.20000,431.80000,,,FM,Wide,High
+RU10 Castiglione,430.25000,435.25000,97.4,,FM,Wide,High
+RU12 San Nicandr,430.30000,435.30000,97.4,,FM,Wide,High
+RU15 M.Luco di R,430.37500,431.97500,97.4,,FM,Wide,High
+RU Rovere di Roc,430.71250,435.71250,97.4,,FM,Narrow,High
+RU Barete,430.73750,435.73750,97.4,,FM,Narrow,High
+RU Colle Nibbio-,430.76250,435.76250,97.4,,FM,Narrow,High
+RU M.S.Franco,430.97500,435.97500,97.4,,FM,Wide,High
+RU19 Roccaraso,431.30000,432.90000,88.5,,FM,Wide,High
+RU20 M.Maiellett,431.32500,432.92500,88.5,,FM,Wide,High
+RU21 M.Pallano,431.35000,432.95000,97.4,,FM,Wide,High

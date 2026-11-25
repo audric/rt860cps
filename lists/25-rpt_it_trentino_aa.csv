@@ -1,0 +1,40 @@
+# name: RPT Trentino AA
+# note: Amateur FM repeaters in Trentino A.A. (2 m and 70 cm, with shift and access tone). Amateur licence needed to transmit.
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+RV Arco,145.55000,144.95000,123.0,,FM,Wide,High
+R0 M.Bondone,145.60000,144.65000,,,FM,Wide,High
+R1 Polsa di Bren,145.62500,145.02500,123.0,,FM,Wide,High
+R1a M.Panarotta,145.63750,145.03750,,,FM,Narrow,High
+R2 Plan de Coron,145.65000,145.05000,123.0,,FM,Wide,High
+R2 M.Ozol-Cles,145.65000,145.05000,136.5,,FM,Wide,High
+R3 M.Telegrafo,145.67500,145.07500,,,FM,Wide,High
+R4 M.Renon,145.70000,145.10000,123.0,,FM,Wide,High
+R5 M.Hirzer-Mera,145.72500,145.12500,,,FM,Wide,High
+R5a M.Agaro,145.73750,145.13750,,,FM,Narrow,High
+R6 M.Cavallaccio,145.75000,145.15000,,,FM,Wide,High
+R6 M.Bondone,145.75000,145.15000,,,FM,Wide,High
+R7 M.Macaion,145.77500,145.17500,,,FM,Wide,High
+R7 Transacqua,145.77500,145.17500,136.5,,FM,Wide,High
+RU1a Ciampedie',430.03750,431.63750,123.0,,FM,Narrow,High
+RU2a M.Paganella,430.06250,431.66250,123.0,,FM,Narrow,High
+RU3 Maranza,430.07500,431.67500,123.0,,FM,Wide,High
+RU4a Cima Palon-,430.11250,435.11250,,,FM,Narrow,High
+RU5 M.Hirzer-Mer,430.12500,431.72500,,,FM,Wide,High
+RU5 Passo Gobber,430.12500,431.72500,136.5,,FM,Wide,High
+RU7 M.Agnello,430.17500,431.77500,123.0,,FM,Wide,High
+RU8 M.Finonchio,430.20000,435.20000,,,FM,Wide,High
+RU11a Polsa di B,430.28750,435.28750,123.0,,FM,Narrow,High
+RU M.Panarotta,430.47500,435.47500,123.0,,FM,Wide,High
+RU M.Elmo,430.52500,435.52500,123.0,,FM,Wide,High
+RU M.Panarotta 2,430.52500,435.52500,123.0,,FM,Wide,High
+RU M.Elmo 2,430.53750,435.53750,123.0,,FM,Narrow,High
+RU Belpiano-Scho,430.53750,435.53750,123.0,,FM,Narrow,High
+RU M.San Vigilio,430.53750,435.53750,110.9,,FM,Narrow,High
+RU Corno del Ren,430.55000,435.55000,123.0,,FM,Wide,High
+RU Alpe Cermis -,430.90000,435.90000,123.0,,FM,Wide,High
+RU M.Plose,431.25000,438.85000,,,FM,Wide,High
+RU21a Passo Giov,431.36250,432.96250,136.5,,FM,Narrow,High
+RU22 M.Plose,431.37500,432.97500,123.0,,FM,Wide,High
+RU22a M.Cavallac,431.38750,432.98750,136.5,,FM,Narrow,High
+RU23 M.Macaion,431.40000,433.00000,123.0,,FM,Wide,High
+RU23 Plan de Cor,431.40000,433.00000,110.9,,FM,Wide,High

@@ -1,0 +1,30 @@
+# name: Airports IT C
+# note: Italian airports, centre (Toscana to Molise): tower, approach, ground, ATIS. AM, for listening
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+LIBP APP,120.05000,,,,AM,Wide,Low
+LIBP TWR,118.45000,,,,AM,Wide,Low
+LIPY APP,118.15000,,,,AM,Wide,Low
+LIPY ATIS,122.85000,,,,AM,Wide,Low
+LIPY TWR,119.80000,,,,AM,Wide,Low
+LIQS AFIS,122.60000,,,,AM,Wide,Low
+LIQS APP,122.10000,,,,AM,Wide,Low
+LIRA ARR,119.20000,,,,AM,Wide,Low
+LIRA ATIS,122.42500,,,,AM,Wide,Low
+LIRA DEL,119.40000,,,,AM,Wide,Low
+LIRA GND,121.75000,,,,AM,Wide,Low
+LIRA TWR,120.50000,,,,AM,Wide,Low
+LIRE GND,121.60000,,,,AM,Wide,Low
+LIRF ARR,120.17500,,,,AM,Wide,Low
+LIRF ATIS,121.85000,,,,AM,Wide,Low
+LIRF DEL,121.72500,,,,AM,Wide,Low
+LIRF GND,121.80000,,,,AM,Wide,Low
+LIRF TWR,118.70000,,,,AM,Wide,Low
+LIRJ AFIS,123.70000,,,,AM,Wide,Low
+LIRL TWR,119.15000,,,,AM,Wide,Low
+LIRP TWR,119.10000,,,,AM,Wide,Low
+LIRQ APP,126.07500,,,,AM,Wide,Low
+LIRQ ATIS,129.35000,,,,AM,Wide,Low
+LIRQ TWR,118.30000,,,,AM,Wide,Low
+LIRU GND,122.70000,,,,AM,Wide,Low
+LIRU TWR,123.80000,,,,AM,Wide,Low
+LIRZ AFIS,118.10000,,,,AM,Wide,Low

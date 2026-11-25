@@ -1,0 +1,9 @@
+# name: Freenet
+# note: Licence-free 149 MHz in Germany, 6 channels
+name,rx,tx,tx_tone,rx_tone,mode,width,power
+Freenet 1,149.02500,,,,FM,Narrow,Low
+Freenet 2,149.03750,,,,FM,Narrow,Low
+Freenet 3,149.05000,,,,FM,Narrow,Low
+Freenet 4,149.08750,,,,FM,Narrow,Low
+Freenet 5,149.10000,,,,FM,Narrow,Low
+Freenet 6,149.11250,,,,FM,Narrow,Low
