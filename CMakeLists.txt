@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-set(RT860_VERSION "0.1.1" CACHE STRING "Version of this build (release builds pass the tag)")
+set(RT860_VERSION "0.1.2" CACHE STRING "Version of this build (release builds pass the tag)")
 project(rt860cps VERSION ${RT860_VERSION} LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
