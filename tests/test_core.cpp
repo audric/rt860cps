@@ -596,6 +596,20 @@ private slots:
         QCOMPARE(r2.placed, (QList<int>{8, 9, 10, 11, 12, 13}));
         QCOMPARE(r2.zone, -1);
     }
+    void factoryNamedZonesAreFree() {
+        // a real radio names every zone "Zone-001".."Zone-256"
+        QByteArray img = blankImage();
+        for (int z = 0; z < ZoneCount; ++z)
+            encodeZone(img, z, Zone{QStringLiteral("Zone-%1").arg(z + 1, 3, 10, QLatin1Char('0')), {}});
+        encodeZone(img, 0, Zone{"Zone-001", {0, 1}});      // has channels: in use
+        encodeZone(img, 1, Zone{"Zone-005", {}});          // renamed: in use
+        QCOMPARE(freeZones(img), ZoneCount - 2);
+        const ImportResult r = importPreset(img, *findPresetGroup("cb_fm"), 0, true);
+        QVERIFY(r.ok);
+        QCOMPARE(r.zone, 2);
+        QCOMPARE(decodeZone(img, 2).channels.size(), 40);
+        QCOMPARE(decodeZone(img, 1).name, QString("Zone-005"));
+    }
     void importIsAllOrNothing() {
         QByteArray img = sampleImage();
         const QByteArray before = img;

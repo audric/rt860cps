@@ -39,7 +39,9 @@ int makeAirbandReceiveOnly(QByteArray &image);
 
 // Empty channel slots at or after firstSlot.
 int freeSlotsFrom(const QByteArray &image, int firstSlot);
-// Zones with no name and no channels, which an import can use.
+// A zone an import can use: no channels, and no name or still the factory name
+// ("Zone-001" for the first zone, and so on).
+bool zoneIsFree(const QByteArray &image, int index);
 int freeZones(const QByteArray &image);
 
 struct ImportResult {

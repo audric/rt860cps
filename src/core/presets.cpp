@@ -217,12 +217,16 @@ int freeSlotsFrom(const QByteArray &image, int firstSlot) {
     return n;
 }
 
+bool zoneIsFree(const QByteArray &image, int index) {
+    const Zone zone = decodeZone(image, index);
+    if (!zone.channels.isEmpty()) return false;
+    // The radio names every zone "Zone-001".."Zone-256" from the factory.
+    return zone.name.isEmpty() || zone.name == QStringLiteral("Zone-%1").arg(index + 1, 3, 10, QLatin1Char('0'));
+}
+
 int freeZones(const QByteArray &image) {
     int n = 0;
-    for (int z = 0; z < ZoneCount; ++z) {
-        const Zone zone = decodeZone(image, z);
-        n += zone.name.isEmpty() && zone.channels.isEmpty();
-    }
+    for (int z = 0; z < ZoneCount; ++z) n += zoneIsFree(image, z);
     return n;
 }
 
@@ -242,10 +246,8 @@ ImportResult importPreset(QByteArray &image, const PresetGroup &group, int first
     }
     int zone = -1;
     if (makeZone) {
-        for (int z = 0; z < ZoneCount && zone < 0; ++z) {
-            const Zone existing = decodeZone(image, z);
-            if (existing.name.isEmpty() && existing.channels.isEmpty()) zone = z;
-        }
+        for (int z = 0; z < ZoneCount && zone < 0; ++z)
+            if (zoneIsFree(image, z)) zone = z;
         if (zone < 0) {
             r.error = QStringLiteral("There is no unused zone left for \"%1\".").arg(group.name);
             return r;
