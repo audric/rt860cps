@@ -70,9 +70,9 @@ private:
     void moveChannels(int delta);
 
     QByteArray m_base, m_work;
+    QByteArray m_saved;             // the image last saved to a file, if any
     QString m_source;
     bool m_fromRadio = false;
-    bool m_radioSeen = false;        // a read from a radio succeeded in this session
     QList<rt860::Channel> m_clipboard;
 
     ChannelModel *m_model = nullptr;

@@ -117,8 +117,10 @@ void ZonePanel::showZone() {
     m_count->setText(tr("%1 of %2 channels").arg(z.channels.size()).arg(rt860::ZoneSlots));
     const int memberRow = m_members->currentRow();
     m_members->clear();
+    int position = 0;
     for (quint16 ch : z.channels) {
-        auto *item = new QListWidgetItem(channelLabel(ch));
+        // The position in the zone is what the radio shows, and what "Area A/B channel" counts.
+        auto *item = new QListWidgetItem(QStringLiteral("%1.  ch %2").arg(++position, 3).arg(channelLabel(ch)));
         item->setData(Qt::UserRole, int(ch));
         m_members->addItem(item);
     }

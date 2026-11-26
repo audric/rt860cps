@@ -4,7 +4,6 @@
 #include <QDir>
 #include <QElapsedTimer>
 #include <QFile>
-#include <QThread>
 
 namespace rt860 {
 
@@ -155,25 +154,23 @@ WriteResult writeToRadio(Transport &transport, const QByteArray &base, const QBy
     }
     result.backupPath = saveBackup(options.backupDir, current);
 
-    // The CPS always starts a write with settings block 0; keep that.
-    const BlockRef first{Cfg, 0};
-    plan.removeAll(first);
-    plan.prepend(first);
-    for (const BlockRef &b : plan) {
-        radio.writeBlock(b.area, b.index, target.mid(b.imageOffset(), BlockSize));
-        report(QStringLiteral("Writing"), ++result.blocksWritten, int(plan.size()));
+    // What the radio must hold afterwards: its own data with the changed blocks replaced.
+    QByteArray send = current;
+    for (const BlockRef &b : plan) send.replace(b.imageOffset(), BlockSize, target.mid(b.imageOffset(), BlockSize));
+
+    // Every block, in the order the CPS sends them: the radio erases an area when
+    // it is written to, so a block left out would be lost.
+    const int total = radioBlockCount();
+    for (int area : {int(Cfg), int(Channels), int(Zones), int(Fm)}) {
+        const AreaInfo &info = areaInfo(area);
+        for (int i = 0; i < info.size / BlockSize; ++i) {
+            radio.writeBlock(area, i, send.mid(info.offset + i * BlockSize, BlockSize));
+            report(QStringLiteral("Writing"), ++result.blocksWritten, total);
+        }
     }
     radio.end();
-
-    // The radio restarts; reconnect and compare what it now holds.
-    QThread::msleep(options.restartWaitMs);
-    radio.connect(options.reconnectAttempts);
-    const QByteArray after = radio.readImage([&](int d, int t) { report(QStringLiteral("Verifying"), d, t); });
-    radio.end();
-    result.radioImage = after;
-    for (const BlockRef &b : plan)
-        if (after.mid(b.imageOffset(), BlockSize) != target.mid(b.imageOffset(), BlockSize)) result.failed.append(b);
-    result.status = result.failed.isEmpty() ? WriteResult::Ok : WriteResult::VerifyFailed;
+    result.radioImage = send;
+    result.status = WriteResult::Ok;
     return result;
 }
 

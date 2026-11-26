@@ -52,7 +52,6 @@ static QByteArray sampleImage() {
 static WriteOptions fastOptions(const QTemporaryDir &dir) {
     WriteOptions o;
     o.backupDir = dir.path();
-    o.restartWaitMs = 0;
     return o;
 }
 
@@ -141,9 +140,10 @@ private slots:
         QVERIFY(setSettingValue(img, "squelch", 7));
         QCOMPARE(quint8(img[223]), quint8(7));
         QVERIFY(!setSettingValue(img, "squelch", 11));
-        QVERIFY(setSettingValue(img, "a_channel", 300));          // shown 1-based, stored 0-based, 16-bit
-        QCOMPARE(img.mid(126, 2), hex("2b01"));
-        QCOMPARE(settingValue(img, "a_channel").toInt(), 300);
+        QVERIFY(setSettingValue(img, "a_channel", 200));          // position in the zone: shown 1-based, stored 0-based, 16-bit
+        QCOMPARE(img.mid(126, 2), hex("c700"));
+        QCOMPARE(settingValue(img, "a_channel").toInt(), 200);
+        QVERIFY(!setSettingValue(img, "a_channel", 201));         // a zone holds 200 channels
         QVERIFY(setSettingValue(img, "scan_start", 144.0));
         QCOMPARE(img.mid(108, 4), hex("00badb00"));               // 14400000
         QVERIFY(!setSettingValue(img, "scan_start", 5.0));
@@ -691,7 +691,7 @@ private slots:
         encodeZone(work, 255, Zone{"Last", {3}});                  // 255 * 512 = block 127
         QCOMPARE(planWrites(base, work), (QList<BlockRef>{{Cfg, 0}, {Channels, 46}, {Zones, 127}}));
     }
-    void writesOnlyWhatChangedThenVerifies() {
+    void writesEveryBlockLikeTheCps() {
         QTemporaryDir dir;
         FakeRadio fake;
         fake.image = sampleImage();
@@ -705,14 +705,22 @@ private slots:
         o.progress = [&](const QString &s, int, int) { if (stages.isEmpty() || stages.last() != s) stages << s; };
         const WriteResult r = writeToRadio(fake, base, work, o);
         QCOMPARE(r.status, WriteResult::Ok);
-        QCOMPARE(fake.writes, (QList<QPair<int, int>>{{0x90, 0}, {0x91, 0}}));   // settings block 0 always first
-        QCOMPARE(r.blocksWritten, 2);
+        // all 184 blocks in the CPS order: the radio erases an area when it is written to
+        QList<QPair<int, int>> all;
+        for (int i = 0; i < 4; ++i) all.append({0x90, i});
+        for (int i = 0; i < 48; ++i) all.append({0x91, i});
+        for (int i = 0; i < 128; ++i) all.append({0x92, i});
+        for (int i = 0; i < 4; ++i) all.append({0x99, i});
+        QCOMPARE(fake.writes, all);
+        QCOMPARE(r.blocksWritten, 184);
         QCOMPARE(decodeChannel(fake.image, 1).name, QString("EDITED"));
+        QCOMPARE(decodeChannel(fake.image, 1000).name, QString("FAR"));     // an unchanged block survived
         QCOMPARE(fake.image, work);
         QCOMPARE(r.radioImage, work);
-        QCOMPARE(fake.sessions, 2);                                // write, then reconnect to verify
-        QCOMPARE(fake.ends, 2);
-        QCOMPARE(stages, (QStringList{"Reading the radio", "Writing", "Verifying"}));
+        QVERIFY(planWrites(r.radioImage, fake.image).isEmpty());
+        QCOMPARE(fake.sessions, 1);                                // no reconnect: the radio is busy backing up
+        QCOMPARE(fake.ends, 1);
+        QCOMPARE(stages, (QStringList{"Reading the radio", "Writing"}));
         // the backup holds the radio as it was
         QFile f(r.backupPath);
         QVERIFY(f.open(QIODevice::ReadOnly));
@@ -788,7 +796,7 @@ private slots:
         QCOMPARE(decodeZone(fake.image, 9).name, QString("OnRadio"));
         QCOMPARE(decodeChannel(fake.image, 1).name, QString("MINE"));
     }
-    void verifyFailureIsReported() {
+    void lostWritesShowWhenComparingAfterwards() {
         QTemporaryDir dir;
         FakeRadio fake;
         fake.image = sampleImage();
@@ -797,9 +805,8 @@ private slots:
         encodeZone(work, 0, Zone{"Renamed", {0}});
         fake.dropWrites = true;
         const WriteResult r = writeToRadio(fake, base, work, fastOptions(dir));
-        QCOMPARE(r.status, WriteResult::VerifyFailed);
-        QCOMPARE(r.failed, (QList<BlockRef>{{Zones, 0}}));
-        QCOMPARE(r.radioImage, base);
+        QCOMPARE(r.status, WriteResult::Ok);
+        QCOMPARE(planWrites(r.radioImage, fake.image), (QList<BlockRef>{{Zones, 0}}));
     }
     void backupFolderProblemStopsBeforeWriting() {
         QTemporaryDir dir;

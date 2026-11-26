@@ -52,6 +52,7 @@ private:
             if (p == rt860::connectCommand()) {
                 if (ignoreConnects > 0) { --ignoreConnects; return; }
                 connected = true;
+                m_erased.clear();
                 ++sessions;
                 m_out += rt860::Ack;
             } else if (p == rt860::endCommand()) {
@@ -77,6 +78,11 @@ private:
             const rt860::AreaInfo &i = rt860::areaInfo(a);
             if (i.writeCmd != op || index >= i.size / 1024) continue;
             if (beforeWrite) beforeWrite(op, index);
+            // The real radio erases the whole area when a write to it starts.
+            if (!dropWrites && !m_erased.contains(a)) {
+                image.replace(i.offset, i.size, QByteArray(i.size, '\xFF'));
+                m_erased.append(a);
+            }
             if (!dropWrites) image.replace(i.offset + index * 1024, 1024, p.mid(3, 1024));
             writes.append({op, index});
             m_out += rt860::Ack;
@@ -84,4 +90,5 @@ private:
         }
     }
     QByteArray m_in, m_out;
+    QList<int> m_erased;
 };

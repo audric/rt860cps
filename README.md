@@ -6,11 +6,9 @@ RT-860** handheld. It does the job of Radtel's Windows programming software
 
 ![RT-860 CPS showing the channel table](docs/screenshot.png)
 
-> **Not yet tried on a real radio.** The serial protocol and memory layout were worked
-> out from Radtel's CPS V1.06, and the program is tested against a simulated radio
-> only. Until someone confirms it on hardware, read your radio first, save that file
-> somewhere safe, and check that what the program shows matches the radio before you
-> write anything.
+> **Tried on one radio so far** (firmware as shipped in 2026). Reading works. Writing
+> works when every memory block is sent, which is what the program now does. Read your
+> radio first and save that file somewhere safe before you write anything.
 
 ## What it does
 
@@ -37,12 +35,11 @@ RT-860** handheld. It does the job of Radtel's Windows programming software
 
 ## How it protects the radio
 
-- Writing is switched off until a read from the radio has succeeded in the same
-  session.
 - Before every write it reads the radio and saves that as a dated `.88dat` backup.
-- It writes only the 1 KiB memory blocks that changed (plus the first settings block,
-  which the Radtel software always sends first), then reconnects, reads the radio
-  back and compares.
+- It sends all 184 memory blocks, as the Radtel software does. The radio erases its
+  memory when it is written to, so a block left out would be lost.
+- After a write the radio shows "Backing up..." and restarts. The program does not talk
+  to it meanwhile; when the radio is back, *Check* reads it and compares.
 - If the radio changed the same memory since it was read (for example through its own
   menu), the write stops and asks.
 - Bytes it does not understand are carried through unchanged.
@@ -79,9 +76,9 @@ The zip is built on Linux: `tools/build-windows.sh` (the script lists what it ne
 3. Edit channels (double-click a cell), zones and settings. Changed values are bold.
 4. Press **Write to radio**. The program lists the changes and asks before sending.
 
-Backups go to `~/.local/share/rt860cps/backups`; change that under
+Backups go to `~/.local/share/rt860cps/rt860cps/backups`; change that under
 *File → Choose backup folder*. On Windows the backups and your own lists are under
-`%LOCALAPPDATA%\rt860cps`.
+`%LOCALAPPDATA%\rt860cps\rt860cps`.
 
 Command line:
 

@@ -29,13 +29,11 @@ library separate from the window, `.deb`/`.tar.gz` packages.
 
 ## Safety model
 
-- Writing is **disabled in the GUI until a read from a real radio has succeeded in the
-  same session**, and the build carries a visible "untested on hardware" notice until a
-  real radio has been verified (nothing here has been run against one yet).
 - Before a write: read the radio, save that image as a dated backup, stop on conflicts
   (radio changed since it was read).
-- Write only the 1 KiB blocks that differ, then end the session, reconnect, read back
-  and compare.
+- Write every block of every area (see "Found on a real radio"), then end the session.
+  Reading back to compare is a separate step the user starts once the radio has
+  restarted.
 - Bytes `CFG[0..11]` (read/write password) are always taken from the radio, never from
   the edited image or a file.
 
@@ -62,8 +60,24 @@ Block numbers (1 KiB each) differ between reading and writing:
 
 CPS write order: connect, read block 0, read block 8 (password check, client-side),
 write `90/0`, then `90/1..3`, `91/0..47`, `92/0..127`, `99/0..3`, End. The CPS always
-writes everything; this program writes only changed blocks but keeps that order and
-the two reads.
+writes everything, and so does this program, in that order and with the two reads.
+
+## Found on a real radio (2026-11-26)
+
+- **A write erases the whole area.** An early version sent only the changed blocks:
+  the blocks it left out came back as `FF` (zones 27..256, CFG blocks 1..3). Every
+  block of every area must be sent.
+- **After the end command of a write** the radio shows "Backing up... Please wait",
+  copies CFG to blocks 12..15, channels to 64..111 and zones to 240..367, and restarts.
+  A connect command sent 1.5 s after the end command was answered with `FF`, and the
+  radio then stayed on that screen until it was switched off and on. Whether the
+  connect caused that or the partial write did is not known; the program no longer
+  reconnects by itself.
+- **Flash map** (1 KiB blocks, read with `52 hi lo sum`; 4096 blocks, then it wraps):
+  0..3 tuning data with a copy in 4..7, 8..11 CFG, 12..15 CFG copy, 16..63 channels,
+  64..111 channels copy, 112..239 zones, 240..367 zones copy, 856..859 FM presets.
+  The CPS has no command for the tuning data.
+- **Zones are named from the factory** "Zone-001" to "Zone-256", with no channels.
 
 ## Image and file format
 

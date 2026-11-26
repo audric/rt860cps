@@ -55,22 +55,26 @@ QList<BlockRef> planWrites(const QByteArray &from, const QByteArray &to);
 struct WriteOptions {
     QString backupDir;
     bool overwriteConflicts = false;
-    int restartWaitMs = 1500;       // pause before reconnecting to verify
-    int reconnectAttempts = 40;     // 200 ms apart
     std::function<void(const QString &stage, int done, int total)> progress;
 };
 struct WriteResult {
-    enum Status { Ok, NothingToWrite, Conflict, VerifyFailed };
+    enum Status { Ok, NothingToWrite, Conflict };
     Status status = Ok;
     QString backupPath;
     QList<BlockRef> conflicts;      // blocks the radio changed since `base` was read
-    QList<BlockRef> failed;         // blocks that read back differently
-    QByteArray radioImage;          // radio memory after the operation
+    QByteArray radioImage;          // Ok: what was sent; otherwise what the radio holds
     int blocksWritten = 0;
 };
 // base: image as last read from the radio, or empty if the edited image came
 // from a file (then everything that differs from the radio is written).
 // work: the edited image.
+//
+// The radio erases a whole area when it is written to, so every block of every
+// area is sent, as Radtel's CPS does: the changed blocks from `work`, the others
+// as the radio held them. After the end command the radio copies the data to its
+// backup area ("Backing up...") and restarts; it must not be talked to meanwhile,
+// so this does not read back. Read the radio once it has restarted and compare
+// with radioImage (planWrites lists the blocks that differ).
 WriteResult writeToRadio(Transport &transport, const QByteArray &base, const QByteArray &work, const WriteOptions &options);
 
 } // namespace rt860

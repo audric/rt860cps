@@ -287,9 +287,9 @@ void MainWindow::updateState() {
     const bool have = m_work.size() == rt860::ImageSize;
     const bool port = m_ports->count() > 0;
     m_readAct->setEnabled(port);
-    m_writeAct->setEnabled(have && port && m_radioSeen && (isDirty() || !m_fromRadio));
-    m_writeAct->setToolTip(m_radioSeen ? tr("Write the changes to the radio")
-                                       : tr("Read from the radio once first; writing is switched on after a successful read."));
+    // No read is asked for first: every write starts by reading the radio and saving a backup.
+    m_writeAct->setEnabled(have && port && (isDirty() || !m_fromRadio));
+    m_writeAct->setToolTip(tr("Write the changes to the radio"));
     m_saveAct->setEnabled(have);
     m_revertAct->setEnabled(have && isDirty());
     m_tabs->setEnabled(have);
@@ -313,6 +313,7 @@ void MainWindow::updateState() {
 void MainWindow::setImage(const QByteArray &image, const QString &source) {
     m_base = image;
     m_work = image;
+    m_saved.clear();
     m_source = source;
     m_model->setImages(&m_work, &m_base);
     m_zones->setImages(&m_work, &m_base);
@@ -332,7 +333,8 @@ void MainWindow::reloadViews() {
 }
 
 bool MainWindow::confirmDiscard() {
-    if (m_work.size() != rt860::ImageSize || !isDirty()) return true;
+    // Changes that are in a saved file are not lost, even if they are not on the radio.
+    if (m_work.size() != rt860::ImageSize || !isDirty() || m_work == m_saved) return true;
     return QMessageBox::question(this, tr("Discard changes?"),
                                  tr("You have changes that were not written to the radio or saved to a file. Discard them?"),
                                  QMessageBox::Discard | QMessageBox::Cancel, QMessageBox::Cancel) == QMessageBox::Discard;
@@ -375,7 +377,6 @@ void MainWindow::readFromRadio() {
     job->kind = RadioJob::Read;
     runJob(job, tr("Reading the radio…"), [this](RadioJob *j) {
         m_fromRadio = true;
-        m_radioSeen = true;
         setImage(j->image, tr("Radio on %1").arg(j->port));
         const int problems = m_model->problemCount();
         notify(problems ? tr("Read the radio. %1 hold values this program does not expect (marked with a warning sign); "
@@ -414,11 +415,10 @@ void MainWindow::startWrite(const QByteArray &base, bool overwriteConflicts) {
         if (lines.isEmpty()) lines << tr("Some bytes outside the listed channels, zones and settings differ.");
         QMessageBox box(QMessageBox::Question, tr("Write to radio"),
                         tr("Write %1 to the radio?").arg(counted(qMax(1, total), "change", "changes")), QMessageBox::Cancel, this);
-        box.setInformativeText(tr("%1 of the radio's 184 memory blocks will be rewritten.\n\n"
-                                  "A backup of the radio's current contents is saved first in:\n%2\n\n"
-                                  "The radio's read/write password is left as it is. After writing, the program reads "
-                                  "the radio again and compares.")
-                                   .arg(plan.size() + (plan.contains(rt860::BlockRef{rt860::Cfg, 0}) ? 0 : 1))
+        box.setInformativeText(tr("All 184 memory blocks are sent, as Radtel's software does: the radio erases its memory "
+                                  "when it is written to.\n\n"
+                                  "A backup of the radio's current contents is saved first in:\n%1\n\n"
+                                  "The radio's read/write password is left as it is.")
                                    .arg(backupDir()));
         box.setDetailedText(lines.join('\n'));
         auto *go = box.addButton(tr("Write"), QMessageBox::AcceptRole);
@@ -440,11 +440,48 @@ void MainWindow::startWrite(const QByteArray &base, bool overwriteConflicts) {
             return image;
         };
         switch (r.status) {
-        case rt860::WriteResult::Ok:
+        case rt860::WriteResult::Ok: {
             m_fromRadio = true;
-            setImage(withTime(r.radioImage), tr("Radio on %1").arg(j->port));
-            notify(tr("Written and verified. Backup of the previous contents: %1").arg(r.backupPath));
+            const QByteArray sent = withTime(r.radioImage);
+            setImage(sent, tr("Radio on %1").arg(j->port));
+            notify(tr("Written. Backup of the previous contents: %1").arg(r.backupPath));
+            // The radio now copies the data to its backup area and restarts. Talking
+            // to it meanwhile can leave it hanging, so checking waits for the user.
+            QMessageBox box(QMessageBox::Information, tr("Write to radio"), tr("Everything was sent to the radio."), QMessageBox::NoButton, this);
+            box.setInformativeText(tr("The radio now shows \"Backing up...\" and then restarts. Do not switch it off, and wait "
+                                      "until its normal screen is back.\n\n"
+                                      "Then press Check to read the radio and compare it with what was sent.\n\n"
+                                      "The radio as it was before is saved in:\n%1").arg(r.backupPath));
+            auto *check = box.addButton(tr("Check"), QMessageBox::AcceptRole);
+            box.addButton(tr("Skip"), QMessageBox::RejectRole);
+            box.exec();
+            if (box.clickedButton() != check) break;
+            auto *read = new RadioJob;
+            read->kind = RadioJob::Read;
+            runJob(read, tr("Reading the radio to check…"), [this, sent, withTime](RadioJob *rj) {
+                const auto different = rt860::planWrites(sent, rj->image);
+                if (different.isEmpty()) {
+                    notify(tr("Checked: the radio holds what was sent."));
+                    QMessageBox::information(this, tr("Write to radio"), tr("Checked: the radio holds what was sent."));
+                    return;
+                }
+                QStringList where;
+                for (const rt860::BlockRef &b : different)
+                    where << QStringLiteral("%1 block %2").arg(QLatin1String(rt860::areaInfo(b.area).name)).arg(b.index);
+                // Show what the radio really holds now, with the intended values as unsaved changes.
+                const QByteArray wanted = m_work;
+                setImage(withTime(rj->image), tr("Radio on %1").arg(rj->port));
+                m_work = wanted;
+                reloadViews();
+                QMessageBox warn(QMessageBox::Warning, tr("Write to radio"),
+                                 tr("The radio does not hold exactly what was sent."), QMessageBox::Ok, this);
+                warn.setInformativeText(tr("The window now shows your values as unsaved changes against what the radio really holds. "
+                                           "The radio changes some values itself, so a few differences can be normal."));
+                warn.setDetailedText(tr("Different: %1").arg(where.join(QStringLiteral(", "))));
+                warn.exec();
+            });
             break;
+        }
         case rt860::WriteResult::NothingToWrite:
             QMessageBox::information(this, tr("Write to radio"), tr("Nothing to write."));
             break;
@@ -460,24 +497,6 @@ void MainWindow::startWrite(const QByteArray &base, bool overwriteConflicts) {
             auto *over = box.addButton(tr("Overwrite"), QMessageBox::DestructiveRole);
             box.exec();
             if (box.clickedButton() == over) startWrite(base, true);
-            break;
-        }
-        case rt860::WriteResult::VerifyFailed: {
-            QStringList where;
-            for (const rt860::BlockRef &b : r.failed)
-                where << QStringLiteral("%1 block %2").arg(QLatin1String(rt860::areaInfo(b.area).name)).arg(b.index);
-            // Show what the radio really holds now, with the intended values as unsaved changes.
-            const QByteArray wanted = m_work;
-            m_fromRadio = true;
-            setImage(withTime(r.radioImage), tr("Radio on %1").arg(j->port));
-            m_work = wanted;
-            reloadViews();
-            QMessageBox box(QMessageBox::Critical, tr("Write to radio"),
-                            tr("The radio did not keep everything that was written."), QMessageBox::Ok, this);
-            box.setInformativeText(tr("The window now shows your values as unsaved changes against what the radio really holds. "
-                                      "Try writing again. The radio as it was before is saved in:\n%1").arg(r.backupPath));
-            box.setDetailedText(tr("Different after writing: %1").arg(where.join(QStringLiteral(", "))));
-            box.exec();
             break;
         }
         }
@@ -521,6 +540,7 @@ void MainWindow::saveFileDialog() {
         QMessageBox::warning(this, tr("Save file"), tr("Cannot save %1: %2").arg(path, f.errorString()));
         return;
     }
+    m_saved = m_work;
     notify(tr("Saved %1. Changes are still not on the radio until you write them.").arg(path));
 }
 
