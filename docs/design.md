@@ -78,6 +78,13 @@ writes everything, and so does this program, in that order and with the two read
   64..111 channels copy, 112..239 zones, 240..367 zones copy, 856..859 FM presets.
   The CPS has no command for the tuning data.
 - **Zones are named from the factory** "Zone-001" to "Zone-256", with no channels.
+- **The radio tried has firmware V2.05**, newer than anything Radtel publishes (firmware
+  up to V1.08, CPS up to V1.06), so some of its behaviour may differ from what the CPS
+  expects.
+- **Area A/B channel** (`CFG[126..127]`, `CFG[131..132]`) has no visible effect in Zone
+  mode on V2.05, with a memory channel number or with a position in the zone. The radio
+  resumes a zone at the entry it keeps in bytes 2-3 of the zone record, and two areas
+  on the same zone always show the same entry. Not tried in Channel mode.
 
 ## Image and file format
 

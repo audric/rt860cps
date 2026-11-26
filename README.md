@@ -6,7 +6,7 @@ RT-860** handheld. It does the job of Radtel's Windows programming software
 
 ![RT-860 CPS showing the channel table](docs/screenshot.png)
 
-> **Tried on one radio so far** (firmware as shipped in 2026). Reading works. Writing
+> **Tried on one radio so far** (firmware V2.05). Reading works. Writing
 > works when every memory block is sent, which is what the program now does. Read your
 > radio first and save that file somewhere safe before you write anything.
 

@@ -140,10 +140,9 @@ private slots:
         QVERIFY(setSettingValue(img, "squelch", 7));
         QCOMPARE(quint8(img[223]), quint8(7));
         QVERIFY(!setSettingValue(img, "squelch", 11));
-        QVERIFY(setSettingValue(img, "a_channel", 200));          // position in the zone: shown 1-based, stored 0-based, 16-bit
-        QCOMPARE(img.mid(126, 2), hex("c700"));
-        QCOMPARE(settingValue(img, "a_channel").toInt(), 200);
-        QVERIFY(!setSettingValue(img, "a_channel", 201));         // a zone holds 200 channels
+        QVERIFY(setSettingValue(img, "a_channel", 300));          // shown 1-based, stored 0-based, 16-bit
+        QCOMPARE(img.mid(126, 2), hex("2b01"));
+        QCOMPARE(settingValue(img, "a_channel").toInt(), 300);
         QVERIFY(setSettingValue(img, "scan_start", 144.0));
         QCOMPARE(img.mid(108, 4), hex("00badb00"));               // 14400000
         QVERIFY(!setSettingValue(img, "scan_start", 5.0));

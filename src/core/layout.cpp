@@ -448,12 +448,14 @@ static QList<Setting> buildSettings() {
     list("a_mode", g, "Area A mode", 123, workMode);
     list("a_show", g, "Area A shows", 124, showMode);
     num("a_zone", g, "Area A zone", 125, 1, 1, 250, 1);
-    // Seen on a radio: a number past the end of the zone lands on the zone's last channel.
-    num("a_channel", g, "Area A channel (position in its zone)", 126, 2, 1, ZoneSlots, 1);
+    // The CPS calls this the area's channel. A radio with firmware V2.05 ignores it in
+    // Zone mode: it resumes each zone at the entry kept in bytes 2-3 of the zone record,
+    // and two areas on the same zone always show the same entry.
+    num("a_channel", g, "Area A channel (memory channel number)", 126, 2, 1, 999, 1);
     list("b_mode", g, "Area B mode", 128, workMode);
     list("b_show", g, "Area B shows", 129, showMode);
     num("b_zone", g, "Area B zone", 130, 1, 1, 250, 1);
-    num("b_channel", g, "Area B channel (position in its zone)", 131, 2, 1, ZoneSlots, 1);
+    num("b_channel", g, "Area B channel (memory channel number)", 131, 2, 1, 999, 1);
 
     g = "Scanning";
     list("scan_dir", g, "Direction", 153, {"Up", "Down"});
